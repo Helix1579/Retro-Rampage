@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
+    private static readonly int IsRunning = Animator.StringToHash("isRunning");
     public float speed;
     public float jumpForce;
     private float moveInput;
     private bool isGrounded;
     public Rigidbody2D RigidBody;
+    [SerializeField] private Animator animator;
     
     private void Start()
     {
@@ -19,11 +20,15 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxis("Horizontal");
         RigidBody.linearVelocity = new Vector2(moveInput * speed, RigidBody.linearVelocity.y);
+        
+        animator.SetBool("isRunning", moveInput != 0 );
 
         if (Input.GetButtonDown("Jump") && isGrounded == false)
         {
             RigidBody.AddForce(new Vector2(RigidBody.linearVelocity.x, jumpForce));
+            animator.SetBool("isJumping", true);
         }
+
     }
     
     private void OnCollisionEnter2D(Collision2D other)
@@ -31,6 +36,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            animator.SetBool("isJumping", false);
         }
     }
     
@@ -40,5 +46,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+    
+    public void OnLanding()
+    {
+        
     }
 }
