@@ -1762,13 +1762,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1570551926514241293, guid: b8f22911c91c34347b980c9ebecdba00,
         type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570551926514241293, guid: b8f22911c91c34347b980c9ebecdba00,
+        type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 630745600}
     - target: {fileID: 1570551926514241293, guid: b8f22911c91c34347b980c9ebecdba00,
         type: 3}
       propertyPath: jumpForce
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1570551926514241293, guid: b8f22911c91c34347b980c9ebecdba00,
         type: 3}
