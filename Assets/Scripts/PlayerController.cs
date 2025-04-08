@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RigidBody;
     [SerializeField] private Animator animator;
     
+    private bool m_FacingRight = true;
+    
     private void Start()
     {
 
@@ -20,6 +22,14 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxis("Horizontal");
         RigidBody.linearVelocity = new Vector2(moveInput * speed, RigidBody.linearVelocity.y);
+            if (moveInput > 0 && !m_FacingRight)
+            {
+                Flip();
+            }
+            else if (moveInput < 0 && m_FacingRight)
+            {
+                Flip();
+            }
         
         animator.SetBool("isRunning", moveInput != 0 );
 
@@ -28,7 +38,16 @@ public class PlayerController : MonoBehaviour
             RigidBody.AddForce(new Vector2(RigidBody.linearVelocity.x, jumpForce));
             animator.SetBool("isJumping", true);
         }
+        
 
+    }
+    
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        m_FacingRight = !m_FacingRight;
+
+        transform.Rotate(0f, 180f, 0f);
     }
     
     private void OnCollisionEnter2D(Collision2D other)
@@ -46,10 +65,5 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-    }
-    
-    public void OnLanding()
-    {
-        
     }
 }
