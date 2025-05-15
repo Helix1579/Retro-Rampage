@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.536892, y: -6.5949492, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,3 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   rb: {fileID: 8273798971303304497}
+  impactEffect: {fileID: 6772440887864488211, guid: 11f99fc4836cdf24f916d293ae297725,
+    type: 3}
