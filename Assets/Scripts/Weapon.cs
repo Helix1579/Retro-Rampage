@@ -1,50 +1,57 @@
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 20f;
-    public float fireRate = 0.1f;
+    public GameObject bulletPrefab;  // Visual effect only
+    public float bulletSpeed = 20f;  // For visuals, or can be ignored
+    public float fireRate = 0.2f;
+    public int damage = 1;
+    public float bulletLifeTime = 2f;
+    public float hitDetectionRadius = 0.5f;  // Radius to detect hits on shooting
 
-    private PlayerController playerController;
-    private float fireCooldown;
+    protected float fireCooldown;
 
-    private void Start()
-    {
-        playerController = GetComponentInParent<PlayerController>();
-    }
-
-    void Update()
+    protected virtual void Update()
     {
         fireCooldown -= Time.deltaTime;
-
-        if (Input.GetButton("Fire1") && fireCooldown <= 0f)
-        {
-            Vector2 shootDirection = GetShootDirection();
-            Shoot(shootDirection);
-            fireCooldown = fireRate;
-        }
     }
 
-    Vector2 GetShootDirection()
+    public virtual void TryShoot(Vector2 direction, string shooterTag)
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        if (fireCooldown > 0f) return;
 
-        if (horizontal == 0 && vertical == 0)
+        fireCooldown = fireRate;
+
+        // Spawn visual bullet prefab (optional, no logic)
+        if (bulletPrefab != null)
         {
-            return playerController != null && playerController.IsFacingRight ? Vector2.right : Vector2.left;
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+            // Optional: move the bullet visually if it has Rigidbody2D or Animator
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = direction.normalized * bulletSpeed;
+            }
+
+            Destroy(bullet, bulletLifeTime);
         }
 
-        return new Vector2(horizontal, vertical).normalized;
-    }
-
-    void Shoot(Vector2 direction)
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        Bullet bulletScript = bullet.GetComponent<Bullet>();
-       bulletScript.SetDirection(direction, bulletSpeed, "Player");
-
+        // Immediately check for targets in front of firePoint in the shooting direction
+        RaycastHit2D hit = Physics2D.CircleCast(firePoint.position, hitDetectionRadius, direction, 10f);
+        if (hit.collider != null)
+        {
+            // Only damage enemies if player shoots, and player if enemy shoots
+            if ((shooterTag == "Player" && hit.collider.CompareTag("Enemy")) ||
+                (shooterTag == "Enemy" && hit.collider.CompareTag("Player")))
+            {
+                IHealth health = hit.collider.GetComponent<IHealth>();
+                if (health != null)
+                {
+                    health.TakeDamage(damage);
+                }
+            }
+        }
     }
 }
