@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     
     private bool m_FacingRight = true;
+    public bool IsFacingRight => m_FacingRight;
+
     
     private void Start()
     {
@@ -44,11 +46,19 @@ public class PlayerController : MonoBehaviour
     
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
-
         transform.Rotate(0f, 180f, 0f);
+
+        // Optional: Flip weapon manually if needed
+        Transform weapon = transform.Find("Weapon");
+        if (weapon != null)
+        {
+            Vector3 scale = weapon.localScale;
+            scale.x *= -1;
+            weapon.localScale = scale;
+        }
     }
+
     
     private void OnCollisionEnter2D(Collision2D other)
     {
