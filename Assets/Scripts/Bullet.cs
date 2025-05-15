@@ -1,22 +1,41 @@
-using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20f;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public GameObject impactEffect;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int damage;
+    private Vector2 moveDirection;
+    private float moveSpeed;
+
+    private void Awake()
     {
-        rb.linearVelocity = transform.right * speed;
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    public void SetDirection(Vector2 direction, float speed)
+    {
+        moveDirection = direction.normalized;
+        moveSpeed = speed;
+
+        rb.linearVelocity = moveDirection * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Instantiate(impactEffect, transform.position, transform.rotation);
-        
+        if (impactEffect != null)
+        {
+            Instantiate(impactEffect, transform.position, transform.rotation);
+        }
+
+        // Damage enemy if it has an Enemy component
+        Enemy enemy = other.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
     }
+
 }
