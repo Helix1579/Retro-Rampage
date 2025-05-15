@@ -44,6 +44,7 @@ public class Weapon : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.SetDirection(direction, bulletSpeed);
+       bulletScript.SetDirection(direction, bulletSpeed, "Player");
+
     }
 }
