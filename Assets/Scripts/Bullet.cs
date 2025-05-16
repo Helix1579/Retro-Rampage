@@ -7,8 +7,7 @@ public class Bullet : MonoBehaviour
     public int damage = 1;
     private Vector2 moveDirection;
     private float moveSpeed;
-
-    private string shooterTag; // NEW: to track who fired
+    private string shooterTag;
 
     private void Awake()
     {
@@ -20,28 +19,27 @@ public class Bullet : MonoBehaviour
         moveDirection = direction.normalized;
         moveSpeed = speed;
         this.shooterTag = shooterTag;
-
         rb.linearVelocity = moveDirection * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (impactEffect != null)
+        // Ignore friendly fire
+        if ((shooterTag == "Player" && other.CompareTag("Player")) ||
+            (shooterTag == "Enemy" && other.CompareTag("Enemy")))
         {
-            Instantiate(impactEffect, transform.position, transform.rotation);
+            return;
         }
 
-        if (shooterTag == "Player" && other.CompareTag("Enemy"))
+        IHealth health = other.GetComponent<IHealth>();
+        if (health != null)
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
-                enemy.TakeDamage(damage);
+            health.TakeDamage(damage);
         }
-        else if (shooterTag == "Enemy" && other.CompareTag("Player"))
+
+        if (impactEffect != null)
         {
-            PlayerHealth player = other.GetComponent<PlayerHealth>();
-            if (player != null)
-                player.TakeDamage(damage);
+            Instantiate(impactEffect, transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);
