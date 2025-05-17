@@ -10,6 +10,15 @@ public class GameManager : MonoBehaviour
     public WeaponData weaponAt500;
     public WeaponData weaponAt1500;
 
+    [Header("Difficulty")]
+public string selectedDifficulty = "Normal";
+
+
+public void SetDifficulty(string difficulty)
+{
+    selectedDifficulty = difficulty;
+    Debug.Log("Difficulty selected: " + difficulty);
+}
     private void Awake()
     {
         // Setup Singleton
