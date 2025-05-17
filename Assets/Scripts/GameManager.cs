@@ -10,13 +10,21 @@ public class GameManager : MonoBehaviour
     public WeaponData weaponAt500;
     public WeaponData weaponAt1500;
 
+    // Store original references for resetting
+    private WeaponData defaultWeaponAt500;
+    private WeaponData defaultWeaponAt1500;
+
     private void Awake()
     {
         // Setup Singleton
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: persist between scenes
+            DontDestroyOnLoad(gameObject);
+
+            // Cache the original weapon unlocks
+            defaultWeaponAt500 = weaponAt500;
+            defaultWeaponAt1500 = weaponAt1500;
         }
         else
         {
@@ -43,5 +51,16 @@ public class GameManager : MonoBehaviour
             shooter.UnlockWeapon(weaponAt1500);
             weaponAt1500 = null;
         }
+    }
+
+    public void ResetGame()
+    {
+        playerScore = 0;
+
+        // Reset weapon unlocks
+        weaponAt500 = defaultWeaponAt500;
+        weaponAt1500 = defaultWeaponAt1500;
+
+        Debug.Log("GameManager reset.");
     }
 }
