@@ -10,22 +10,29 @@ public class GameManager : MonoBehaviour
     public WeaponData weaponAt500;
     public WeaponData weaponAt1500;
 
+    private WeaponData defaultWeaponAt500;
+    private WeaponData defaultWeaponAt1500;
+
     [Header("Difficulty")]
-public string selectedDifficulty = "Normal";
+    public string selectedDifficulty = "Normal";
 
 
-public void SetDifficulty(string difficulty)
-{
-    selectedDifficulty = difficulty;
-    Debug.Log("Difficulty selected: " + difficulty);
-}
+    public void SetDifficulty(string difficulty)
+    {
+        selectedDifficulty = difficulty;
+        Debug.Log("Difficulty selected: " + difficulty);
+    }
     private void Awake()
     {
         // Setup Singleton
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: persist between scenes
+            DontDestroyOnLoad(gameObject);
+
+            // Cache the original weapon unlocks
+            defaultWeaponAt500 = weaponAt500;
+            defaultWeaponAt1500 = weaponAt1500;
         }
         else
         {
@@ -52,5 +59,16 @@ public void SetDifficulty(string difficulty)
             shooter.UnlockWeapon(weaponAt1500);
             weaponAt1500 = null;
         }
+    }
+
+    public void ResetGame()
+    {
+        playerScore = 0;
+
+        // Reset weapon unlocks
+        weaponAt500 = defaultWeaponAt500;
+        weaponAt1500 = defaultWeaponAt1500;
+
+        Debug.Log("GameManager reset.");
     }
 }
