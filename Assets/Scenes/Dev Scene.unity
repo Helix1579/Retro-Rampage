@@ -936,9 +936,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1949425573}
-  easeHealthSlider: {fileID: 1018468617}
-  maxHealth: 10
-  health: 0
+  easeHealthSlider: {fileID: 1018468616}
+  lerpSpeed: 0.005
 --- !u!1 &943131437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8399520715403291584, guid: 6c5a0d13b9031b947879e65168ae1153,
@@ -977,6 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  healthBar: {fileID: 882733533}
 --- !u!114 &943131447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018468615}
-  - component: {fileID: 1018468617}
+  - component: {fileID: 1018468616}
   m_Layer: 5
   m_Name: EaseHealthBar
   m_TagString: Untagged
@@ -1046,7 +1046,7 @@ RectTransform:
   m_AnchoredPosition: {x: -96.885376, y: 131.92822}
   m_SizeDelta: {x: 240.2721, y: 33.029}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1018468617
+--- !u!114 &1018468616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,14 +1085,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 677185537}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 3
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3207,15 +3207,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1325429212}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 3
-  m_WholeNumbers: 1
-  m_Value: 3
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
