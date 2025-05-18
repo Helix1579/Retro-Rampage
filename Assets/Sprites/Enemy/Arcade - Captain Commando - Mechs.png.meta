@@ -1,0 +1,1677 @@
+fileFormatVersion: 2
+guid: e78ee669c76044f13b6bbc2b9297998e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3366081334934089504
+    second: Arcade - Captain Commando - Mechs_0
+  - first:
+      213: -2376231406908539096
+    second: Arcade - Captain Commando - Mechs_1
+  - first:
+      213: 7991177143200460262
+    second: Arcade - Captain Commando - Mechs_2
+  - first:
+      213: -2314922056536409987
+    second: Arcade - Captain Commando - Mechs_3
+  - first:
+      213: 8286052906889048692
+    second: Arcade - Captain Commando - Mechs_4
+  - first:
+      213: -7529554008070302498
+    second: Arcade - Captain Commando - Mechs_5
+  - first:
+      213: -5226952993418927625
+    second: Arcade - Captain Commando - Mechs_6
+  - first:
+      213: -9146061743751750381
+    second: Arcade - Captain Commando - Mechs_7
+  - first:
+      213: -1183276017895789618
+    second: Arcade - Captain Commando - Mechs_8
+  - first:
+      213: 378211565523446451
+    second: Arcade - Captain Commando - Mechs_9
+  - first:
+      213: 4737718032711443184
+    second: Arcade - Captain Commando - Mechs_10
+  - first:
+      213: -1762451286450483992
+    second: Arcade - Captain Commando - Mechs_11
+  - first:
+      213: -6007585259133842251
+    second: Arcade - Captain Commando - Mechs_12
+  - first:
+      213: -1951558824113808505
+    second: Arcade - Captain Commando - Mechs_13
+  - first:
+      213: -89487175610573945
+    second: Arcade - Captain Commando - Mechs_14
+  - first:
+      213: -2031056541291350028
+    second: Arcade - Captain Commando - Mechs_15
+  - first:
+      213: 7097277499717973717
+    second: Arcade - Captain Commando - Mechs_16
+  - first:
+      213: -3038037346239260354
+    second: Arcade - Captain Commando - Mechs_17
+  - first:
+      213: -6212678748065014915
+    second: Arcade - Captain Commando - Mechs_18
+  - first:
+      213: -6847763056975866175
+    second: Arcade - Captain Commando - Mechs_19
+  - first:
+      213: -5287498214443668299
+    second: Arcade - Captain Commando - Mechs_20
+  - first:
+      213: -8937311635804026711
+    second: Arcade - Captain Commando - Mechs_21
+  - first:
+      213: 390745605878512070
+    second: Arcade - Captain Commando - Mechs_22
+  - first:
+      213: 3561603685545507457
+    second: Arcade - Captain Commando - Mechs_23
+  - first:
+      213: 759138281383473328
+    second: Arcade - Captain Commando - Mechs_24
+  - first:
+      213: 4857192054964808375
+    second: Arcade - Captain Commando - Mechs_25
+  - first:
+      213: -2040186485854445840
+    second: Arcade - Captain Commando - Mechs_26
+  - first:
+      213: 4861199368411362395
+    second: Arcade - Captain Commando - Mechs_27
+  - first:
+      213: -6099927866252886385
+    second: Arcade - Captain Commando - Mechs_28
+  - first:
+      213: 3471500920537007392
+    second: Arcade - Captain Commando - Mechs_29
+  - first:
+      213: 1211183376371008311
+    second: Arcade - Captain Commando - Mechs_30
+  - first:
+      213: -8061237169287052461
+    second: Arcade - Captain Commando - Mechs_31
+  - first:
+      213: -8349832550781862906
+    second: Arcade - Captain Commando - Mechs_32
+  - first:
+      213: -5007411683175862562
+    second: Arcade - Captain Commando - Mechs_33
+  - first:
+      213: 6324894566106922021
+    second: Arcade - Captain Commando - Mechs_34
+  - first:
+      213: -1459682890754364087
+    second: Arcade - Captain Commando - Mechs_35
+  - first:
+      213: -4019526473774845691
+    second: Arcade - Captain Commando - Mechs_36
+  - first:
+      213: -6938672787258961975
+    second: Arcade - Captain Commando - Mechs_37
+  - first:
+      213: -4726643992565012955
+    second: Arcade - Captain Commando - Mechs_38
+  - first:
+      213: 2284202573202427103
+    second: Arcade - Captain Commando - Mechs_39
+  - first:
+      213: -2216382963288815635
+    second: Arcade - Captain Commando - Mechs_40
+  - first:
+      213: -2473691316120467565
+    second: Arcade - Captain Commando - Mechs_41
+  - first:
+      213: 6737526629328251887
+    second: Arcade - Captain Commando - Mechs_42
+  - first:
+      213: -7213785503161524577
+    second: Arcade - Captain Commando - Mechs_43
+  - first:
+      213: 7520847156623531550
+    second: Arcade - Captain Commando - Mechs_44
+  - first:
+      213: 3461922714794828762
+    second: Arcade - Captain Commando - Mechs_45
+  - first:
+      213: -3594348119494082706
+    second: Arcade - Captain Commando - Mechs_46
+  - first:
+      213: 5406850809174710512
+    second: Arcade - Captain Commando - Mechs_47
+  - first:
+      213: 6756359771583092753
+    second: Arcade - Captain Commando - Mechs_48
+  - first:
+      213: -1327791950762829172
+    second: Arcade - Captain Commando - Mechs_49
+  - first:
+      213: 2165841381845442037
+    second: Arcade - Captain Commando - Mechs_50
+  - first:
+      213: 6607993264959400380
+    second: Arcade - Captain Commando - Mechs_51
+  - first:
+      213: -7318289549787283574
+    second: Arcade - Captain Commando - Mechs_52
+  - first:
+      213: -4314027617848959837
+    second: Arcade - Captain Commando - Mechs_53
+  - first:
+      213: -6301217694687821806
+    second: Arcade - Captain Commando - Mechs_54
+  - first:
+      213: -2796063187416138338
+    second: Arcade - Captain Commando - Mechs_55
+  - first:
+      213: -5006520250822919628
+    second: Arcade - Captain Commando - Mechs_56
+  - first:
+      213: -4703013090215962473
+    second: Arcade - Captain Commando - Mechs_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 883
+        width: 122
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e05e223cd64941d0800000000000000
+      internalID: -3366081334934089504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 883
+        width: 111
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ff61f002ee50fd0800000000000000
+      internalID: -2376231406908539096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 888
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed2fadc54d56ee60800000000000000
+      internalID: 7991177143200460262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_3
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 888
+        width: 106
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d783e6197aebfdfd0800000000000000
+      internalID: -2314922056536409987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 888
+        width: 93
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472f639a739fdf270800000000000000
+      internalID: 8286052906889048692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_5
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 888
+        width: 77
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4d9dfd586a18790800000000000000
+      internalID: -7529554008070302498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 777
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1a99132f12677b0800000000000000
+      internalID: -5226952993418927625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 778
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d13ed4d49a21180800000000000000
+      internalID: -9146061743751750381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_8
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 777
+        width: 96
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb25122bb8249fe0800000000000000
+      internalID: -1183276017895789618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 776
+        width: 96
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba28fc3a6daf3500800000000000000
+      internalID: 378211565523446451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_10
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 775
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f26ab10371cfb140800000000000000
+      internalID: 4737718032711443184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_11
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 777
+        width: 98
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec403194e38a87e0800000000000000
+      internalID: -1762451286450483992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_12
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 777
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc447f4905c0aca0800000000000000
+      internalID: -6007585259133842251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 664
+        width: 96
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bda6ad69baae4e0800000000000000
+      internalID: -1951558824113808505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_14
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 664
+        width: 102
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b57cd43e312cef0800000000000000
+      internalID: -89487175610573945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_15
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 664
+        width: 134
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7789136dc30d3e0800000000000000
+      internalID: -2031056541291350028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_16
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 664
+        width: 105
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6ff0378489e7260800000000000000
+      internalID: 7097277499717973717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 664
+        width: 121
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39d90b3129b6d5d0800000000000000
+      internalID: -3038037346239260354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_18
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 664
+        width: 145
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b57f5489128c9a0800000000000000
+      internalID: -6212678748065014915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 552
+        width: 122
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c619ead7cbd7f0a0800000000000000
+      internalID: -6847763056975866175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_20
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 552
+        width: 111
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bca29963680f96b0800000000000000
+      internalID: -5287498214443668299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_21
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 557
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a88fec4b6a48f380800000000000000
+      internalID: -8937311635804026711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_22
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 558
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9feebee053c6500800000000000000
+      internalID: 390745605878512070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_23
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 446
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a79ab8eab5d6130800000000000000
+      internalID: 3561603685545507457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_24
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 447
+        width: 95
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0334dae30098a00800000000000000
+      internalID: 759138281383473328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_25
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 446
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bae6028076386340800000000000000
+      internalID: 4857192054964808375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 445
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fed713533dcfa3e0800000000000000
+      internalID: -2040186485854445840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_27
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 444
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b543380e113767340800000000000000
+      internalID: 4861199368411362395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_28
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 446
+        width: 98
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e7d78ace3b85ba0800000000000000
+      internalID: -6099927866252886385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 333
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025cc06c1bf3d2030800000000000000
+      internalID: 3471500920537007392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_30
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 333
+        width: 102
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733c37a1ddcfec010800000000000000
+      internalID: 1211183376371008311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 373
+        width: 77
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353487a318bb02090800000000000000
+      internalID: -8061237169287052461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_32
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 387
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c37acc88f6f1c80800000000000000
+      internalID: -8349832550781862906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_33
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 386
+        width: 86
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede6924ca99128ab0800000000000000
+      internalID: -5007411683175862562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_34
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 384
+        width: 92
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cf99ed81a86c750800000000000000
+      internalID: 6324894566106922021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_35
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 335
+        width: 66
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94deed3052a2ebbe0800000000000000
+      internalID: -1459682890754364087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_36
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 336
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5013f5de7f5c738c0800000000000000
+      internalID: -4019526473774845691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_37
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 338
+        width: 97
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf82c6dcd1e4bf90800000000000000
+      internalID: -6938672787258961975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_38
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 338
+        width: 98
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526ad63e456976eb0800000000000000
+      internalID: -4726643992565012955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 227
+        width: 122
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc83ca532e13bf10800000000000000
+      internalID: 2284202573202427103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_40
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 227
+        width: 111
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de741f21073dd31e0800000000000000
+      internalID: -2216382963288815635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_41
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 232
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397cbaaaadeabadd0800000000000000
+      internalID: -2473691316120467565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_42
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 233
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb68ddb5c0808d50800000000000000
+      internalID: 6737526629328251887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_43
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 121
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ed13e1e4c73eb90800000000000000
+      internalID: -7213785503161524577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_44
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 122
+        width: 95
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e5d8c44aa6f5860800000000000000
+      internalID: 7520847156623531550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_45
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 121
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3a337fd583b0030800000000000000
+      internalID: 3461922714794828762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_46
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 120
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f3672dd6f4e1ec0800000000000000
+      internalID: -3594348119494082706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_47
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 119
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8546a0a2ef80b40800000000000000
+      internalID: 5406850809174710512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_48
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 121
+        width: 98
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11813ff5a6963cd50800000000000000
+      internalID: 6756359771583092753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_49
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 8
+        width: 95
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a9827714cb29de0800000000000000
+      internalID: -1327791950762829172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_50
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 8
+        width: 102
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd1dbcf24d9e0e10800000000000000
+      internalID: 2165841381845442037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_51
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 48
+        width: 77
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb924142dde44bb50800000000000000
+      internalID: 6607993264959400380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_52
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 17
+        width: 78
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fb97dad66307a90800000000000000
+      internalID: -7318289549787283574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_53
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 13
+        width: 81
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac53eefcbe7124c0800000000000000
+      internalID: -4314027617848959837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_54
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 12
+        width: 82
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2100ab754e39d88a0800000000000000
+      internalID: -6301217694687821806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_55
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 10
+        width: 66
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9db38068536239d0800000000000000
+      internalID: -2796063187416138338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_56
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 25
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a76e88b54458ab0800000000000000
+      internalID: -5006520250822919628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Captain Commando - Mechs_57
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 6
+        width: 82
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7985aa7138a8bbeb0800000000000000
+      internalID: -4703013090215962473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arcade - Captain Commando - Mechs_0: -3366081334934089504
+      Arcade - Captain Commando - Mechs_1: -2376231406908539096
+      Arcade - Captain Commando - Mechs_10: 4737718032711443184
+      Arcade - Captain Commando - Mechs_11: -1762451286450483992
+      Arcade - Captain Commando - Mechs_12: -6007585259133842251
+      Arcade - Captain Commando - Mechs_13: -1951558824113808505
+      Arcade - Captain Commando - Mechs_14: -89487175610573945
+      Arcade - Captain Commando - Mechs_15: -2031056541291350028
+      Arcade - Captain Commando - Mechs_16: 7097277499717973717
+      Arcade - Captain Commando - Mechs_17: -3038037346239260354
+      Arcade - Captain Commando - Mechs_18: -6212678748065014915
+      Arcade - Captain Commando - Mechs_19: -6847763056975866175
+      Arcade - Captain Commando - Mechs_2: 7991177143200460262
+      Arcade - Captain Commando - Mechs_20: -5287498214443668299
+      Arcade - Captain Commando - Mechs_21: -8937311635804026711
+      Arcade - Captain Commando - Mechs_22: 390745605878512070
+      Arcade - Captain Commando - Mechs_23: 3561603685545507457
+      Arcade - Captain Commando - Mechs_24: 759138281383473328
+      Arcade - Captain Commando - Mechs_25: 4857192054964808375
+      Arcade - Captain Commando - Mechs_26: -2040186485854445840
+      Arcade - Captain Commando - Mechs_27: 4861199368411362395
+      Arcade - Captain Commando - Mechs_28: -6099927866252886385
+      Arcade - Captain Commando - Mechs_29: 3471500920537007392
+      Arcade - Captain Commando - Mechs_3: -2314922056536409987
+      Arcade - Captain Commando - Mechs_30: 1211183376371008311
+      Arcade - Captain Commando - Mechs_31: -8061237169287052461
+      Arcade - Captain Commando - Mechs_32: -8349832550781862906
+      Arcade - Captain Commando - Mechs_33: -5007411683175862562
+      Arcade - Captain Commando - Mechs_34: 6324894566106922021
+      Arcade - Captain Commando - Mechs_35: -1459682890754364087
+      Arcade - Captain Commando - Mechs_36: -4019526473774845691
+      Arcade - Captain Commando - Mechs_37: -6938672787258961975
+      Arcade - Captain Commando - Mechs_38: -4726643992565012955
+      Arcade - Captain Commando - Mechs_39: 2284202573202427103
+      Arcade - Captain Commando - Mechs_4: 8286052906889048692
+      Arcade - Captain Commando - Mechs_40: -2216382963288815635
+      Arcade - Captain Commando - Mechs_41: -2473691316120467565
+      Arcade - Captain Commando - Mechs_42: 6737526629328251887
+      Arcade - Captain Commando - Mechs_43: -7213785503161524577
+      Arcade - Captain Commando - Mechs_44: 7520847156623531550
+      Arcade - Captain Commando - Mechs_45: 3461922714794828762
+      Arcade - Captain Commando - Mechs_46: -3594348119494082706
+      Arcade - Captain Commando - Mechs_47: 5406850809174710512
+      Arcade - Captain Commando - Mechs_48: 6756359771583092753
+      Arcade - Captain Commando - Mechs_49: -1327791950762829172
+      Arcade - Captain Commando - Mechs_5: -7529554008070302498
+      Arcade - Captain Commando - Mechs_50: 2165841381845442037
+      Arcade - Captain Commando - Mechs_51: 6607993264959400380
+      Arcade - Captain Commando - Mechs_52: -7318289549787283574
+      Arcade - Captain Commando - Mechs_53: -4314027617848959837
+      Arcade - Captain Commando - Mechs_54: -6301217694687821806
+      Arcade - Captain Commando - Mechs_55: -2796063187416138338
+      Arcade - Captain Commando - Mechs_56: -5006520250822919628
+      Arcade - Captain Commando - Mechs_57: -4703013090215962473
+      Arcade - Captain Commando - Mechs_6: -5226952993418927625
+      Arcade - Captain Commando - Mechs_7: -9146061743751750381
+      Arcade - Captain Commando - Mechs_8: -1183276017895789618
+      Arcade - Captain Commando - Mechs_9: 378211565523446451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
