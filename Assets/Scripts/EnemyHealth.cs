@@ -1,14 +1,18 @@
 using UnityEngine;
+using System;
 
 public class EnemyHealth : BaseHealth
 {
-    public int scoreValue = 10; // Can vary by enemy type
+    public int scoreValue = 10;
+    public event Action OnDeathEvent;
 
     protected override void Die()
     {
         Debug.Log($"{gameObject.name} (enemy) died!");
 
         GameManager.Instance?.AddScore(scoreValue);
+
+        OnDeathEvent?.Invoke();
 
         Destroy(gameObject);
     }
