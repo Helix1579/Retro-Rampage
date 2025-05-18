@@ -89,7 +89,12 @@ public class PlayerController : MonoBehaviour
         {
             health.ResetHealth();
         }
-
+        
+        PlayerShooter shooter = FindObjectOfType<PlayerShooter>();
+        if (shooter != null)
+        {
+            shooter.ResetWeapons();
+        }
         // Add any other reset logic here: ammo, cooldowns, animations, etc.
     }
 

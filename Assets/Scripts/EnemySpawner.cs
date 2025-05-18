@@ -86,4 +86,28 @@ public class EnemySpawner : MonoBehaviour
             default: return EnemyType.Patrol;
         }
     }
+    
+    public void ResetSpawner()
+    {
+        enemiesSpawned = 0;
+        enemiesAlive = 0;
+        lastSpawnX = 0f;
+
+        // Destroy all enemies
+        GameObject[] spawnedEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in spawnedEnemies)
+        {
+            Destroy(enemy);
+        }
+
+        // Destroy all bullets/projectiles
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject bullet in bullets)
+        {
+            Destroy(bullet);
+        }
+
+        Debug.Log("EnemySpawner has been reset (enemies and bullets cleared).");
+    }
+
 }
