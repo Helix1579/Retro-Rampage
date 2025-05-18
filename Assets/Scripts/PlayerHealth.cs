@@ -16,6 +16,9 @@ public class PlayerHealth : BaseHealth
             OnHealthChanged += healthBar.SetHealth;
         }
     }
+    
+
+
 
     protected override void Die()
     {
