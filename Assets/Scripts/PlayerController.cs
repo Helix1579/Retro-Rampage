@@ -16,10 +16,13 @@ public class PlayerController : MonoBehaviour
     public bool IsFacingRight => m_FacingRight;
 
     
-    private void Start()
-    {
+    private Vector3 startPosition;
 
+    private void Awake()
+    {
+        startPosition = transform.position;
     }
+
     private void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
@@ -76,4 +79,18 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
+    
+    public void ResetPlayer()
+    {
+        transform.position = startPosition;
+        gameObject.SetActive(true);
+
+        if (TryGetComponent(out BaseHealth health))
+        {
+            health.ResetHealth();
+        }
+
+        // Add any other reset logic here: ammo, cooldowns, animations, etc.
+    }
+
 }

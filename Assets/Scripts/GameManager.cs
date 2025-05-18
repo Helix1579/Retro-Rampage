@@ -24,13 +24,12 @@ public class GameManager : MonoBehaviour
     }
     private void Awake()
     {
-        // Setup Singleton
         if (Instance == null)
         {
+            Debug.Log("GameManager instance created.");
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            // Cache the original weapon unlocks
             defaultWeaponAt500 = weaponAt500;
             defaultWeaponAt1500 = weaponAt1500;
         }
@@ -64,8 +63,9 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         playerScore = 0;
+        Debug.Log("Reset game");
+        FindObjectOfType<PlayerShooter>().ResetWeapons();
 
-        // Reset weapon unlocks
         weaponAt500 = defaultWeaponAt500;
         weaponAt1500 = defaultWeaponAt1500;
 

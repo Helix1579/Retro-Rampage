@@ -54,6 +54,24 @@ public class PlayerShooter : Weapon, IShooter
             UpdateWeaponUI();
         }
     }
+    
+    public void ResetWeapons()
+    {
+        unlockedWeapons.Clear();
+    
+        if (baseWeapon != null)
+        {
+            unlockedWeapons.Add(baseWeapon);
+            currentWeaponIndex = 0;
+            UpdateWeaponUI();
+            Debug.Log("Weapons reset to base weapon.");
+        }
+        else
+        {
+            Debug.LogWarning("Base weapon is not assigned, cannot reset weapons.");
+        }
+    }
+
 
     private void SwitchWeapon()
     {

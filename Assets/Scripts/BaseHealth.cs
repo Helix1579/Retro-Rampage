@@ -35,4 +35,10 @@ public abstract class BaseHealth : MonoBehaviour, IHealth
     }
 
     protected abstract void Die();
+    
+    public virtual void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth); // Update healthbar if bound
+    }
 }

@@ -43,12 +43,35 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void RestartGame()
+    public void  RestartGame()
     {
         Time.timeScale = 1f;
+        GameIsPaused = false;
+        PauseMenuUI.SetActive(false);
+
+        // Reset game logic
         GameManager.Instance.ResetGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // Reset gameplay UI state
+        GameObject mainMenuCanvas = GameObject.Find("MainMenuCanvas");
+        if (mainMenuCanvas != null)
+        {
+            mainMenuCanvas.SetActive(false); // Hide main menu
+        }
+
+        GameObject gameplayGroup = GameObject.Find("GameplayGroup"); // or reference it via serialized field
+        if (gameplayGroup != null)
+        {
+            gameplayGroup.SetActive(true); // Show gameplay elements
+        }
+        
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.ResetPlayer();
+        }
     }
+
 
     
     public void QuitGame()
