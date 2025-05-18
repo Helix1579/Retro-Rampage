@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
     {
         playerScore = 0;
         Debug.Log("Reset game");
-        FindObjectOfType<PlayerShooter>().ResetWeapons();
 
         weaponAt500 = defaultWeaponAt500;
         weaponAt1500 = defaultWeaponAt1500;

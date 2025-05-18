@@ -70,6 +70,11 @@ public class PauseMenu : MonoBehaviour
         {
             player.ResetPlayer();
         }
+        EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
+        if (spawner != null)
+        {
+            spawner.ResetSpawner();
+        }
     }
 
 

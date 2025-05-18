@@ -54,7 +54,7 @@ MonoBehaviour:
     pointA: {fileID: 0}
     pointB: {fileID: 0}
     fireDistance: 4
-  player: {fileID: 0}
+  player: {fileID: 1784462618488185903, guid: 6c5a0d13b9031b947879e65168ae1153, type: 3}
   maxEnemiesToSpawn: 50
   maxEnemiesAliveAtOnce: 10
   spawnDistanceAhead: 15
