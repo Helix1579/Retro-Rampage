@@ -14,14 +14,34 @@ public class GameManager : MonoBehaviour
     private WeaponData defaultWeaponAt1500;
 
     [Header("Difficulty")]
-    public string selectedDifficulty = "Normal";
+    public DifficultySetting currentDifficulty;
+public DifficultySetting noobSettings;
+public DifficultySetting proSettings;
+public DifficultySetting rampageSettings;
 
 
     public void SetDifficulty(string difficulty)
+{
+    switch (difficulty)
     {
-        selectedDifficulty = difficulty;
-        Debug.Log("Difficulty selected: " + difficulty);
+        case "Noob":
+            currentDifficulty = noobSettings;
+            break;
+        case "Pro":
+            currentDifficulty = proSettings;
+            break;
+        case "Rampage":
+            currentDifficulty = rampageSettings;
+            break;
+        default:
+            Debug.LogWarning("Unknown difficulty selected, using Pro as default.");
+            currentDifficulty = proSettings;
+            break;
     }
+
+    Debug.Log($"Difficulty selected: {currentDifficulty.level}");
+}
+
     private void Awake()
     {
         if (Instance == null)

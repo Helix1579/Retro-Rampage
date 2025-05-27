@@ -16,4 +16,10 @@ public class EnemyHealth : BaseHealth
 
         Destroy(gameObject);
     }
+    public void SetHealth(int amount)
+{
+    maxHealth = amount;
+    currentHealth = maxHealth;
+}
+
 }
