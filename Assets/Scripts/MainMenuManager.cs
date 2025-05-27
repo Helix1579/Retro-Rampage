@@ -5,13 +5,34 @@ public class MainMenuManager : MonoBehaviour
     public GameObject difficultyPanel;
     public GameObject gameplayGroup;
 
-    private void Start()
+private void Start()
+{
+    Time.timeScale = 0f;
+
+    difficultyPanel.SetActive(false);
+    gameplayGroup.SetActive(false);
+
+    // ✅ Play menu music immediately when main menu appears
+    if (MusicManager.Instance != null)
     {
-        // Pause game time and show only main menu
-        Time.timeScale = 0f;
-        difficultyPanel.SetActive(false);
-        gameplayGroup.SetActive(false);
+        MusicManager.Instance.PlayMenuMusic();
     }
+}
+
+
+public void OnSelectDifficulty(string difficulty)
+{
+    GameManager.Instance?.SetDifficulty(difficulty);
+
+    Time.timeScale = 1f;
+    gameObject.SetActive(false);         // Hide menu canvas
+    gameplayGroup.SetActive(true);       // Show gameplay elements
+
+    // ✅ Switch to gameplay music
+    MusicManager.Instance?.PlayGameplayMusic();
+}
+
+
 
     public void OnPlayPressed()
     {
@@ -24,17 +45,4 @@ public class MainMenuManager : MonoBehaviour
             playButton.SetActive(false);
     }
 
-    public void OnSelectDifficulty(string difficulty)
-    {
-        GameManager.Instance?.SetDifficulty(difficulty);
-
-        // Resume time
-        Time.timeScale = 1f;
-
-        // Hide entire menu (this script is on MainMenuCanvas)
-        gameObject.SetActive(false); // hides Play button + Difficulty panel
-
-        // Enable gameplay
-        gameplayGroup.SetActive(true);
-    }
 }
