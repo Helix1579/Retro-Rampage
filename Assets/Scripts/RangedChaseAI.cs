@@ -47,7 +47,7 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
                 agent.ResetPath();
                 fireCooldown -= Time.deltaTime;
 
-                if (fireCooldown <= 0f && config.bulletPrefab != null && firePoint != null)
+                if (fireCooldown <= 0f  && firePoint != null)
                 {
                     fireCooldown = config.fireRate;
                     ShootAtPlayer();
@@ -62,13 +62,19 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
 
     void ShootAtPlayer()
     {
+        GameObject bulletPrefab = GetComponent<Enemy>()?.bulletPrefab;
+        if (bulletPrefab == null || firePoint == null) return;
+
         Vector2 dir = (player.position - firePoint.position).normalized;
-        GameObject bullet = Instantiate(config.bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+    
         if (bullet.TryGetComponent(out Bullet b))
         {
             b.SetDirection(dir, 10f, "Enemy");
             b.damage = config.damage;
         }
+
         Destroy(bullet, 3f);
     }
+
 }

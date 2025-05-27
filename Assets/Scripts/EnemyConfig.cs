@@ -6,7 +6,6 @@ public class EnemyConfig
     public int damage = 1;
     public float fireRate = 1.5f;
     public float detectionRange = 5f;
-    public GameObject bulletPrefab;
 
     // Patrol-specific
     public Transform pointA;

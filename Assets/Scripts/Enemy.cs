@@ -3,9 +3,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
-    // private int currentHealth;
-
+    public GameObject bulletPrefab;
     public GameObject deathEffect;
+    
+    public GameObject GetBulletPrefab() => bulletPrefab;
     
     public void TakeDamage(int damage)
     {
