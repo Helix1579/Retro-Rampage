@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: ffc8686976c6f4968bb22e110359893a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6540217510691440271
+    second: robocop_0
+  - first:
+      213: 3082018604883592465
+    second: robocop_1
+  - first:
+      213: -7269340643053975975
+    second: robocop_2
+  - first:
+      213: 5882867187737727633
+    second: robocop_3
+  - first:
+      213: -565250929519055537
+    second: robocop_4
+  - first:
+      213: -3426886202027897598
+    second: robocop_5
+  - first:
+      213: 7510665497782145575
+    second: robocop_6
+  - first:
+      213: -3256750275755972074
+    second: robocop_7
+  - first:
+      213: -4126643142714979927
+    second: robocop_8
+  - first:
+      213: 1366479789161994210
+    second: robocop_9
+  - first:
+      213: 2831789712935661541
+    second: robocop_10
+  - first:
+      213: 8478810595574543429
+    second: robocop_11
+  - first:
+      213: 1294938215258917593
+    second: robocop_12
+  - first:
+      213: -8376654124669239090
+    second: robocop_13
+  - first:
+      213: 228091751469728423
+    second: robocop_14
+  - first:
+      213: 4354059175241300754
+    second: robocop_15
+  - first:
+      213: -8607099509337100159
+    second: robocop_16
+  - first:
+      213: 5588935014417137564
+    second: robocop_17
+  - first:
+      213: -4336272181056184143
+    second: robocop_18
+  - first:
+      213: 7605767034539273760
+    second: robocop_19
+  - first:
+      213: 9051475318402845860
+    second: robocop_20
+  - first:
+      213: 5938319881403455781
+    second: robocop_21
+  - first:
+      213: -1846053526720278575
+    second: robocop_22
+  - first:
+      213: -7526500714090374059
+    second: robocop_23
+  - first:
+      213: 2894106213415570837
+    second: robocop_24
+  - first:
+      213: 8060870133985630405
+    second: robocop_25
+  - first:
+      213: -7504209259774117565
+    second: robocop_26
+  - first:
+      213: 3448820221850040528
+    second: robocop_27
+  - first:
+      213: -3905806836875842175
+    second: robocop_28
+  - first:
+      213: 6074246557402842338
+    second: robocop_29
+  - first:
+      213: -1410797114024358032
+    second: robocop_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: robocop_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 532
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f868d86ac2583ca50800000000000000
+      internalID: 6540217510691440271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 532
+        width: 103
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1154b37879785ca20800000000000000
+      internalID: 3082018604883592465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 532
+        width: 109
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9564573233d1e1b90800000000000000
+      internalID: -7269340643053975975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_3
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 532
+        width: 101
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19298e9d98424a150800000000000000
+      internalID: 5882867187737727633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_4
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 532
+        width: 113
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4dae014643d728f0800000000000000
+      internalID: -565250929519055537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_5
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 532
+        width: 105
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d807ad7214170d0800000000000000
+      internalID: -3426886202027897598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_6
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 532
+        width: 110
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722561e1a7e3b3860800000000000000
+      internalID: 7510665497782145575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_7
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 532
+        width: 102
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ae86311e2bdc2d0800000000000000
+      internalID: -3256750275755972074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 381
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a90ca3fce73bb6c0800000000000000
+      internalID: -4126643142714979927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_9
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 381
+        width: 98
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e750c9d026b6f210800000000000000
+      internalID: 1366479789161994210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_10
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 381
+        width: 100
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efa22e8db98c4720800000000000000
+      internalID: 2831789712935661541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_11
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 381
+        width: 92
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544f9036059caa570800000000000000
+      internalID: 8478810595574543429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_12
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 381
+        width: 112
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da0696227b88f110800000000000000
+      internalID: 1294938215258917593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_13
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 381
+        width: 100
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec087cc747520cb80800000000000000
+      internalID: -8376654124669239090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_14
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 381
+        width: 101
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2cc8e4d385a2300800000000000000
+      internalID: 228091751469728423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_15
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 381
+        width: 92
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bb94740c9bc6c30800000000000000
+      internalID: 4354059175241300754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 230
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180f58f39907d8880800000000000000
+      internalID: -8607099509337100159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_17
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 230
+        width: 97
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f731fb8c2ef8d40800000000000000
+      internalID: 5588935014417137564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_18
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 230
+        width: 91
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0ecb60d6772d3c0800000000000000
+      internalID: -4336272181056184143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_19
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 230
+        width: 88
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ee61222dc1d8960800000000000000
+      internalID: 7605767034539273760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 230
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac0e9668dc4d9d70800000000000000
+      internalID: 9051475318402845860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_21
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 230
+        width: 99
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52951b53876296250800000000000000
+      internalID: 5938319881403455781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_22
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 230
+        width: 91
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df0b7729108166e0800000000000000
+      internalID: -1846053526720278575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_23
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 230
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c5be64a7f7c8790800000000000000
+      internalID: -7526500714090374059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_24
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 161
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59dc2e8744ee92820800000000000000
+      internalID: 2894106213415570837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_25
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 160
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8d4c4bda6fddf60800000000000000
+      internalID: 8060870133985630405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_26
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 160
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34977feef61bbd790800000000000000
+      internalID: -7504209259774117565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_27
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 159
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d83e8918bbacdf20800000000000000
+      internalID: 3448820221850040528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_28
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 159
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d29be2069cbc9c0800000000000000
+      internalID: -3905806836875842175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_29
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 19
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4c22caf0f0c4450800000000000000
+      internalID: 6074246557402842338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robocop_30
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 19
+        width: 124
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f8e60ef77db6ce0800000000000000
+      internalID: -1410797114024358032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      robocop_0: 6540217510691440271
+      robocop_1: 3082018604883592465
+      robocop_10: 2831789712935661541
+      robocop_11: 8478810595574543429
+      robocop_12: 1294938215258917593
+      robocop_13: -8376654124669239090
+      robocop_14: 228091751469728423
+      robocop_15: 4354059175241300754
+      robocop_16: -8607099509337100159
+      robocop_17: 5588935014417137564
+      robocop_18: -4336272181056184143
+      robocop_19: 7605767034539273760
+      robocop_2: -7269340643053975975
+      robocop_20: 9051475318402845860
+      robocop_21: 5938319881403455781
+      robocop_22: -1846053526720278575
+      robocop_23: -7526500714090374059
+      robocop_24: 2894106213415570837
+      robocop_25: 8060870133985630405
+      robocop_26: -7504209259774117565
+      robocop_27: 3448820221850040528
+      robocop_28: -3905806836875842175
+      robocop_29: 6074246557402842338
+      robocop_3: 5882867187737727633
+      robocop_30: -1410797114024358032
+      robocop_4: -565250929519055537
+      robocop_5: -3426886202027897598
+      robocop_6: 7510665497782145575
+      robocop_7: -3256750275755972074
+      robocop_8: -4126643142714979927
+      robocop_9: 1366479789161994210
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
