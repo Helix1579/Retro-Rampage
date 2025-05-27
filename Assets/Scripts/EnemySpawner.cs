@@ -6,8 +6,8 @@ public class EnemySpawner : MonoBehaviour
     public EnemyConfig enemyConfig;
     public Transform player;
 
-    public int maxEnemiesToSpawn = 50;
-    public int maxEnemiesAliveAtOnce = 10;
+   private DifficultySetting Difficulty => GameManager.Instance.currentDifficulty;
+
 
     public float spawnDistanceAhead = 15f;
     public float spawnDistanceBehind = 5f;
@@ -21,8 +21,8 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         if (player == null) return;
-        if (enemiesSpawned >= maxEnemiesToSpawn) return;
-        if (enemiesAlive >= maxEnemiesAliveAtOnce) return;
+       if (enemiesSpawned >= Difficulty.maxEnemiesToSpawn) return;
+if (enemiesAlive >= Difficulty.maxEnemiesAliveAtOnce) return;
 
         if (player.position.x - lastSpawnX >= 2f)
         {
@@ -60,7 +60,21 @@ public class EnemySpawner : MonoBehaviour
             spawnPos = new Vector3(spawnX, spawnY, 0f);
         }
 
-        GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, enemyConfig);
+        // Create a modified config based on difficulty
+EnemyConfig config = new EnemyConfig
+{
+    bulletPrefab = enemyConfig.bulletPrefab,
+    fireRate = enemyConfig.fireRate,
+    detectionRange = enemyConfig.detectionRange,
+    fireDistance = enemyConfig.fireDistance,
+    pointA = enemyConfig.pointA,
+    pointB = enemyConfig.pointB,
+
+    // 🔥 Override with difficulty-based damage
+    damage = GameManager.Instance.currentDifficulty.enemyDamage
+};
+GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
+
 
         if (enemy != null)
         {
@@ -70,6 +84,7 @@ public class EnemySpawner : MonoBehaviour
             var enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
+                enemyHealth.SetHealth(GameManager.Instance.currentDifficulty.enemyHealth);
                 enemyHealth.OnDeathEvent += () => enemiesAlive--;
             }
         }
