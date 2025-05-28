@@ -4,7 +4,7 @@ public class EnemyFactory : MonoBehaviour
 {
     public GameObject patrolEnemyPrefab;
     public GameObject rangedChaseEnemyPrefab;
-    public GameObject turretEnemyPrefab;
+    // public GameObject turretEnemyPrefab;
 
     public GameObject SpawnEnemy(EnemyType type, Vector3 position, EnemyConfig config)
     {
@@ -17,9 +17,9 @@ public class EnemyFactory : MonoBehaviour
             case EnemyType.RangedChase:
                 prefab = rangedChaseEnemyPrefab;
                 break;
-            case EnemyType.Turret:
-                prefab = turretEnemyPrefab;
-                break;
+            // case EnemyType.Turret:
+            //     prefab = turretEnemyPrefab;
+            //     break;
         }
 
         if (prefab == null)

@@ -79,7 +79,7 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
             }
         }
         
-        Debug.Log($"Distance: {distance}, Provoked: {isProvoked}, Detection: {enemy.detectionRange}, FireDistance: {config.fireDistance}");
+        // Debug.Log($"Distance: {distance}, Provoked: {isProvoked}, Detection: {enemy.detectionRange}, FireDistance: {config.fireDistance}");
     }
 
 

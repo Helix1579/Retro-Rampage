@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         maxHealth -= damage;
-
+    
         if (maxHealth <= 0)
         {
             Die();
