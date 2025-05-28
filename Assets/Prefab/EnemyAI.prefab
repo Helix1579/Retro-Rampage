@@ -139,6 +139,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2267541276879874454, guid: 1c0e73998c62bed46ad6dda801b30440,
     type: 3}
   deathEffect: {fileID: 0}
+  fireRate: 0.3
+  detectionRange: 5
 --- !u!61 &5074565802407456494
 BoxCollider2D:
   m_ObjectHideFlags: 0

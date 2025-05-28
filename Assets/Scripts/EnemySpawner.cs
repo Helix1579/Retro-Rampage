@@ -22,13 +22,15 @@ public class EnemySpawner : MonoBehaviour
     {
         if (player == null) return;
        if (enemiesSpawned >= Difficulty.maxEnemiesToSpawn) return;
-if (enemiesAlive >= Difficulty.maxEnemiesAliveAtOnce) return;
+        if (enemiesAlive >= Difficulty.maxEnemiesAliveAtOnce) return;
 
         if (player.position.x - lastSpawnX >= 2f)
         {
             SpawnRandomEnemyNearPlayer();
             lastSpawnX = player.position.x;
         }
+
+        Debug.Log("Spawner Update running");
     }
 
     void SpawnRandomEnemyNearPlayer()
@@ -63,9 +65,6 @@ if (enemiesAlive >= Difficulty.maxEnemiesAliveAtOnce) return;
         // Create a modified config based on difficulty
 EnemyConfig config = new EnemyConfig
 {
-    bulletPrefab = enemyConfig.bulletPrefab,
-    fireRate = enemyConfig.fireRate,
-    detectionRange = enemyConfig.detectionRange,
     fireDistance = enemyConfig.fireDistance,
     pointA = enemyConfig.pointA,
     pointB = enemyConfig.pointB,

@@ -10,6 +10,8 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
     private bool goingToA = true;
     private bool isProvoked = false;
     private float fireCooldown;
+    
+    private Enemy enemy;
 
     public void SetTarget(Transform target)
     {
@@ -19,6 +21,7 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
     public void Init(EnemyConfig cfg)
     {
         config = cfg;
+        enemy = GetComponent<Enemy>();
         agent = GetComponent<NavMeshAgent>();
         if (agent != null)
         {
@@ -42,7 +45,7 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
         if (player == null) return;
 
         float dist = Vector2.Distance(transform.position, player.position);
-        if (dist <= config.detectionRange)
+        if (dist <= enemy.detectionRange)
         {
             isProvoked = true;
         }
@@ -52,7 +55,8 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
             fireCooldown -= Time.deltaTime;
             if (fireCooldown <= 0f && firePoint != null)
             {
-                fireCooldown = config.fireRate;
+                fireCooldown = GetComponent<Enemy>().fireRate;
+
                 ShootAtPlayer();
             }
         }
