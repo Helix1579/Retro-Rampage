@@ -7,6 +7,8 @@ public class TurretAI : MonoBehaviour, IEnemyAI
     private Transform firePoint;
     private float fireCooldown;
 
+    private Enemy enemy; // ✅ cache prefab data
+
     public void SetTarget(Transform target)
     {
         player = target;
@@ -15,7 +17,8 @@ public class TurretAI : MonoBehaviour, IEnemyAI
     public void Init(EnemyConfig cfg)
     {
         config = cfg;
-        fireCooldown = config.fireRate;
+        enemy = GetComponent<Enemy>(); // ✅ store prefab reference
+        fireCooldown = enemy.fireRate;
     }
 
     public void SetFirePoint(Transform fp)
@@ -25,15 +28,15 @@ public class TurretAI : MonoBehaviour, IEnemyAI
 
     void Update()
     {
-        if (player == null || firePoint == null ) return;
+        if (player == null || firePoint == null || enemy == null) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= config.detectionRange)
+        if (distance <= enemy.detectionRange)
         {
             fireCooldown -= Time.deltaTime;
             if (fireCooldown <= 0f)
             {
-                fireCooldown = config.fireRate;
+                fireCooldown = enemy.fireRate;
                 ShootAtPlayer();
             }
         }
@@ -41,12 +44,12 @@ public class TurretAI : MonoBehaviour, IEnemyAI
 
     void ShootAtPlayer()
     {
-        GameObject bulletPrefab = GetComponent<Enemy>()?.bulletPrefab;
+        GameObject bulletPrefab = enemy?.bulletPrefab;
         if (bulletPrefab == null || firePoint == null) return;
 
         Vector2 dir = (player.position - firePoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-    
+
         if (bullet.TryGetComponent(out Bullet b))
         {
             b.SetDirection(dir, 10f, "Enemy");
@@ -55,5 +58,4 @@ public class TurretAI : MonoBehaviour, IEnemyAI
 
         Destroy(bullet, 3f);
     }
-
 }

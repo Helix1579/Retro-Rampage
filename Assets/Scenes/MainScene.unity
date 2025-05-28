@@ -1115,22 +1115,22 @@ MonoBehaviour:
     enemyDamage: 0
   noobSettings:
     level: 0
-    maxEnemiesToSpawn: 20
-    maxEnemiesAliveAtOnce: 5
-    enemyHealth: 10
-    enemyDamage: 1
-  proSettings:
-    level: 1
-    maxEnemiesToSpawn: 35
-    maxEnemiesAliveAtOnce: 7
-    enemyHealth: 12
-    enemyDamage: 2
-  rampageSettings:
-    level: 2
     maxEnemiesToSpawn: 50
-    maxEnemiesAliveAtOnce: 9
-    enemyHealth: 15
-    enemyDamage: 3
+    maxEnemiesAliveAtOnce: 10
+    enemyHealth: 50
+    enemyDamage: 20
+  proSettings:
+    level: 0
+    maxEnemiesToSpawn: 50
+    maxEnemiesAliveAtOnce: 10
+    enemyHealth: 50
+    enemyDamage: 20
+  rampageSettings:
+    level: 0
+    maxEnemiesToSpawn: 50
+    maxEnemiesAliveAtOnce: 20
+    enemyHealth: 50
+    enemyDamage: 20
 --- !u!4 &325765449
 Transform:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ba2671c2f4f44feafa6e99d9a7ea14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 2147483647
   healthBar: {fileID: 1384999309}
 --- !u!114 &943131447
 MonoBehaviour:
@@ -2419,8 +2419,8 @@ Transform:
   - {fileID: 725279857}
   - {fileID: 1147871838}
   - {fileID: 596815018}
-  - {fileID: 2018628897}
   - {fileID: 211441488}
+  - {fileID: 2018628897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1384999309 stripped
@@ -5219,7 +5219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2011254729
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5344,7 +5344,7 @@ Transform:
   m_GameObject: {fileID: 2018628896}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -870.47, y: -557.37, z: 5.395838}
+  m_LocalPosition: {x: -844.05, y: -555.55, z: 5.395838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
