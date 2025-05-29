@@ -8,6 +8,10 @@ public class BossAI : MonoBehaviour
     [Header("Combat Settings")]
     public Transform player;
     public float[] phaseFireRates = { 2f, 1.2f, 0.6f };
+    public float[] phaseAttackRange = { 10f, 8f, 5f };
+    [Header("Bullet Prefabs Per Phase")]
+    public GameObject[] bulletPrefabs;
+    public Sprite[] turretSprites;
 
     [Header("Turrets")]
     public TurretController[] turrets;
@@ -15,6 +19,8 @@ public class BossAI : MonoBehaviour
     [Header("Phase Thresholds")]
     public int phase2Threshold = 70;
     public int phase3Threshold = 35;
+    
+    private int bossHp;
     
     
     private EnemyHealth bossHealth;
@@ -27,20 +33,25 @@ public class BossAI : MonoBehaviour
         foreach (var turret in turrets)
             turret.Target = player;
 
-        SetTurretsFireRate(phaseFireRates[0]);
+        bossHp = bossHealth.CurrentHealth;
+        SetTurretsFireRate(phaseFireRates[0], bulletPrefabs[0], phaseAttackRange[0], turretSprites[0]);
     }
 
     void Update()
     {
         if (currentPhase == BossPhase.Dead || player == null) return;
 
-        HandlePhaseTransition();
+        int currentHp = bossHealth.CurrentHealth;
+
+        if (currentHp != bossHp)
+        {
+            HandlePhaseTransition(currentHp);
+            bossHp = currentHp;
+        }
     }
 
-    void HandlePhaseTransition()
+    void HandlePhaseTransition(int hp)
     {
-        int hp = bossHealth.CurrentHealth;
-
         if (hp <= 0)
         {
             EnterPhase(BossPhase.Dead);
@@ -48,35 +59,46 @@ public class BossAI : MonoBehaviour
         }
 
         if (hp <= phase3Threshold && currentPhase != BossPhase.Phase3)
+        {
             EnterPhase(BossPhase.Phase3);
+        }
         else if (hp <= phase2Threshold && currentPhase != BossPhase.Phase2)
+        {
             EnterPhase(BossPhase.Phase2);
+        }
+        else if (hp > phase2Threshold && currentPhase != BossPhase.Phase1)
+        {
+            EnterPhase(BossPhase.Phase1);
+        }
     }
+
 
     void EnterPhase(BossPhase newPhase)
     {
         if (currentPhase == newPhase) return;
 
         currentPhase = newPhase;
-        Debug.Log($"Boss entered {newPhase}");
+        Debug.Log($"Boss entered {(int)newPhase}, bullet prefab: {bulletPrefabs[(int)newPhase]?.name}");
 
         if (newPhase == BossPhase.Dead)
         {
-            SetTurretsFireRate(0f);
+            SetTurretsFireRate(0f, null, 0f, null);
             return;
         }
 
-        SetTurretsFireRate(phaseFireRates[(int)newPhase]);
+        SetTurretsFireRate(phaseFireRates[(int)newPhase], bulletPrefabs[(int)newPhase], phaseAttackRange[(int)newPhase], turretSprites[(int)newPhase]);
     }
 
-    void SetTurretsFireRate(float rate)
+    void SetTurretsFireRate(float rate, GameObject prefab, float range, Sprite sprite)
     {
         foreach (var turret in turrets)
         {
             turret.UpdateFireRate(rate);
+            turret.UpdateBulletPrefab(prefab);
+            turret.UpdateAttackRange(range);
+            turret.UpdateTurretSprite(sprite);
         }
     }
-
     void OnBossDeath()
     {
         currentPhase = BossPhase.Dead;

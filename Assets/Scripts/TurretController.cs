@@ -3,9 +3,12 @@ using UnityEngine;
 public class TurretController : MonoBehaviour
 {
     private float fireRate;
+    private float range;
     private float fireCooldown;
     private EnemyShooter shooter;
     private Transform target;
+    private GameObject bulletPrefab;
+    public SpriteRenderer turretSprite;
     
     public Transform Target
     {
@@ -18,6 +21,7 @@ public class TurretController : MonoBehaviour
         shooter = GetComponent<EnemyShooter>();
         target = shooter.player;
         shooter.fireRate = fireRate; // Sync rate with EnemyShooter's fireRate
+        shooter.attackRange = range;
     }
 
     void Update()
@@ -45,4 +49,30 @@ public class TurretController : MonoBehaviour
             shooter.fireRate = newRate;
         }
     }
+    public void UpdateAttackRange(float newRange)
+    {
+        range = newRange;
+        if (shooter != null)
+        {
+            shooter.attackRange = newRange;
+        }
+    }
+    
+    public void UpdateBulletPrefab(GameObject newPrefab)
+    {
+        bulletPrefab = newPrefab;
+        if (shooter != null)
+        {
+            shooter.bulletPrefab = newPrefab;
+        }
+    }
+    
+    public void UpdateTurretSprite(Sprite newSprite)
+    {
+        if (turretSprite != null && newSprite != null)
+        {
+            turretSprite.sprite = newSprite;
+        }
+    }
+
 }

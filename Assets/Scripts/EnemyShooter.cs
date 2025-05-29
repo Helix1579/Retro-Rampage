@@ -4,7 +4,7 @@ public class EnemyShooter : Weapon, IShooter
 {
     public Transform player;
     public float attackRange = 6f;
-    private EnemyConfig currentConfig;
+    // private EnemyConfig currentConfig;
     public void SetConfig(EnemyConfig config) => currentConfig = config;
 
     private void Start()

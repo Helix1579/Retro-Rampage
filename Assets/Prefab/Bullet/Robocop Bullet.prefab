@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1505150697389355507}
   - component: {fileID: 8625333218010584361}
   - component: {fileID: 3771610026296656198}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Robocop Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8259038497482934769}
   - component: {fileID: 3639959540363393434}
   - component: {fileID: 3844377157795422067}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Boss Turret Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -5225540622116197949, guid: b234f03316011de44b65da1e3034922d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.23, y: 1.19}
@@ -116,7 +116,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &3639959540363393434
 CircleCollider2D:

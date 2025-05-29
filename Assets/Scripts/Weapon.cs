@@ -9,7 +9,7 @@ public abstract class Weapon : MonoBehaviour
     public int damage = 1;
     public float bulletLifeTime = 2f;
     protected float fireCooldown;
-    private EnemyConfig currentConfig;
+    protected EnemyConfig currentConfig;
 
     protected virtual void Update()
     {
