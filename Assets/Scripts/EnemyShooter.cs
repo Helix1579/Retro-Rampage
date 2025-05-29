@@ -26,28 +26,13 @@ public class EnemyShooter : Weapon, IShooter
         if (distance <= attackRange)
         {
             Vector2 direction = (player.position - firePoint.position).normalized;
-            TryShoot(direction, "Enemy");
+            Shoot(direction);
         }
     }
 
     public void Shoot(Vector2 direction)
     {
-        if (bulletPrefab == null || firePoint == null) return;
-
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-
-        // Rotate bullet to face direction
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        bullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        // Apply bullet behavior
-        if (bullet.TryGetComponent(out Bullet b))
-        {
-            b.SetDirection(direction, 10f, "Enemy");
-            b.damage = currentConfig?.damage ?? 1;
-        }
-
-        Destroy(bullet, 3f);
+        TryShoot(direction, "Enemy");
     }
 
 }

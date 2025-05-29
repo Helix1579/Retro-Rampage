@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8208120069365421035}
   - component: {fileID: 4508345019387949584}
   - component: {fileID: 1484123816053369676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Commando Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}

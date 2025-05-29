@@ -14,6 +14,7 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
 
     private bool isFacingRight = true;
     private Vector3 firePointOriginalLocalPos;
+    private Collider2D myCollider;
 
     public void SetTarget(Transform target)
     {
@@ -36,6 +37,8 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
             agent.updateRotation = false;
             agent.updateUpAxis = false;
         }
+        
+        // IgnoreCollisionWithOtherEnemies();
     }
 
     public void SetFirePoint(Transform fp)
@@ -80,7 +83,6 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
             // Stop and shoot
             agent.ResetPath();
             FlipTowardsPlayer();
-            fireCooldown -= Time.deltaTime;
 
             fireCooldown -= Time.deltaTime;
             if (fireCooldown <= 0f)
@@ -117,4 +119,37 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
             firePoint.localScale = fpScale;
         }
     }
+    
+    // public void IgnoreCollisionWithOtherEnemies()
+    // {
+    //     if (myCollider == null)
+    //     {
+    //         myCollider = GetComponent<Collider2D>();
+    //         if (myCollider == null)
+    //         {
+    //             Debug.LogWarning("No Collider2D found on enemy for ignoring collisions.");
+    //             return;
+    //         }
+    //     }
+    //
+    //     GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    //     Debug.Log($"Found {enemies.Length} enemies to ignore collisions with.");
+    //
+    //     foreach (var enemyObj in enemies)
+    //     {
+    //         if (enemyObj == this.gameObject) continue; // Skip self
+    //
+    //         Collider2D otherCollider = enemyObj.GetComponent<Collider2D>();
+    //         if (otherCollider != null)
+    //         {
+    //             Debug.Log($"Ignoring collision between {name} and {enemyObj.name}");
+    //             Physics2D.IgnoreCollision(myCollider, otherCollider);
+    //         }
+    //         else
+    //         {
+    //             Debug.LogWarning($"Enemy {enemyObj.name} has no Collider2D.");
+    //         }
+    //     }
+    // }
+
 }

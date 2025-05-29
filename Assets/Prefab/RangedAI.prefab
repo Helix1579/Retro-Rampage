@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2974568464620088837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6572284525131627227}
   - component: {fileID: 3723116941714904466}
   - component: {fileID: 30857464742121671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RangedAI
   m_TagString: Enemy
   m_Icon: {fileID: 0}

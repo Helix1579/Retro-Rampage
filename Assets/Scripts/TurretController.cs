@@ -17,15 +17,7 @@ public class TurretController : MonoBehaviour
     {
         shooter = GetComponent<EnemyShooter>();
         target = shooter.player;
-
-        if (shooter == null)
-        {
-            Debug.LogError("TurretController requires an EnemyShooter component.");
-        }
-        else
-        {
-            shooter.fireRate = fireRate; // Sync rate with EnemyShooter's fireRate
-        }
+        shooter.fireRate = fireRate; // Sync rate with EnemyShooter's fireRate
     }
 
     void Update()
