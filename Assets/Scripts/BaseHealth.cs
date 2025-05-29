@@ -4,6 +4,8 @@ public abstract class BaseHealth : MonoBehaviour, IHealth
 {
     public int maxHealth = 5;
     protected int currentHealth;
+    
+    public int CurrentHealth => currentHealth;
 
     public System.Action<int> OnHealthChanged;
 
@@ -17,7 +19,7 @@ public abstract class BaseHealth : MonoBehaviour, IHealth
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        Debug.Log($"{gameObject.name} took {amount} damage. Remaining: {currentHealth}");
+        // Debug.Log($"{gameObject.name} took {amount} damage. Remaining: {currentHealth}");
 
         OnHealthChanged?.Invoke(currentHealth); // <- notify healthbar
 

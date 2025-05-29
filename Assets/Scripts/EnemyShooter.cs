@@ -4,6 +4,8 @@ public class EnemyShooter : Weapon, IShooter
 {
     public Transform player;
     public float attackRange = 6f;
+    // private EnemyConfig currentConfig;
+    public void SetConfig(EnemyConfig config) => currentConfig = config;
 
     private void Start()
     {
@@ -24,7 +26,7 @@ public class EnemyShooter : Weapon, IShooter
         if (distance <= attackRange)
         {
             Vector2 direction = (player.position - firePoint.position).normalized;
-            TryShoot(direction, "Enemy");
+            Shoot(direction);
         }
     }
 
@@ -32,4 +34,5 @@ public class EnemyShooter : Weapon, IShooter
     {
         TryShoot(direction, "Enemy");
     }
+
 }

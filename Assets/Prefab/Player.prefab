@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3014685637854918408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,8 +46,10 @@ GameObject:
   - component: {fileID: 4938169540329946345}
   - component: {fileID: 6611622094701273235}
   - component: {fileID: 2057903986375700937}
-  - component: {fileID: 7728694387444591835}
-  m_Layer: 0
+  - component: {fileID: 2336530445590429449}
+  - component: {fileID: 2263211379187320715}
+  - component: {fileID: 7818284653282770902}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -165,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 300
+  jumpForce: 350
   RigidBody: {fileID: 8440360467607298479}
   animator: {fileID: 6611622094701273235}
 --- !u!61 &4938169540329946345
@@ -273,7 +275,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: -0.10613125}
   m_Size: {x: 0.12477716, y: 0.25870273}
   m_Direction: 0
---- !u!114 &7728694387444591835
+--- !u!114 &2336530445590429449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8399520715403291584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c349b725ce703fb4386a81a6911a1974, type: 3}
+  m_Script: {fileID: 11500000, guid: 7274fb5f8f81e4e73baa6e9b5fef104c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3014685637854918408}
@@ -290,3 +292,53 @@ MonoBehaviour:
     type: 3}
   bulletSpeed: 20
   fireRate: 0.1
+  damage: 100
+  bulletLifeTime: 5
+  baseWeapon: {fileID: 11400000, guid: 7f792e0abdcc34712827bc71ba4fb8cd, type: 2}
+  unlockedWeapons: []
+  weaponUI: {fileID: 0}
+--- !u!114 &2263211379187320715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399520715403291584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ba2671c2f4f44feafa6e99d9a7ea14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2147483647
+  healthBar: {fileID: 0}
+--- !u!114 &7818284653282770902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399520715403291584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 5115a36d22a976241a4f5d640cd6042c,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Default
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

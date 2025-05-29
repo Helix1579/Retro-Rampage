@@ -6,12 +6,12 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
     private NavMeshAgent agent;
     private Transform player;
     private EnemyConfig config;
-    private Transform firePoint;  // now instance specific
+    private Transform firePoint;
     private bool goingToA = true;
     private bool isProvoked = false;
     private float fireCooldown;
-    
-    private Enemy enemy;
+    private EnemyShooter enemy;
+    private bool isFacingRight = true;
 
     public void SetTarget(Transform target)
     {
@@ -21,13 +21,18 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
     public void Init(EnemyConfig cfg)
     {
         config = cfg;
-        enemy = GetComponent<Enemy>();
+        enemy = GetComponent<EnemyShooter>();
         agent = GetComponent<NavMeshAgent>();
         if (agent != null)
         {
             agent.updateRotation = false;
             agent.updateUpAxis = false;
             agent.speed = 2f;
+        }
+
+        if (enemy != null)
+        {
+            enemy.SetConfig(cfg);
         }
     }
 
@@ -40,25 +45,51 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
     {
         if (agent == null || config.pointA == null || config.pointB == null) return;
 
-        Patrol();
-
-        if (player == null) return;
+        if (player == null || enemy == null || firePoint == null)
+        {
+            Patrol();
+            return;
+        }
 
         float dist = Vector2.Distance(transform.position, player.position);
-        if (dist <= enemy.detectionRange)
+
+        // Detect player
+        if (dist <= enemy.attackRange)
         {
             isProvoked = true;
+        }
+        else if (dist > enemy.attackRange + 1f)
+        {
+            isProvoked = false;
         }
 
         if (isProvoked)
         {
-            fireCooldown -= Time.deltaTime;
-            if (fireCooldown <= 0f && firePoint != null)
-            {
-                fireCooldown = GetComponent<Enemy>().fireRate;
+            // Flip to face player
+            FlipTowardsPlayer();
 
-                ShootAtPlayer();
+            // Chase the player
+            agent.SetDestination(player.position);
+
+            // Stop moving if close enough to fire distance
+            if (dist <= config.fireDistance)
+            {
+                agent.ResetPath();
+
+                // Shoot at player
+                fireCooldown -= Time.deltaTime;
+                if (fireCooldown <= 0f)
+                {
+                    fireCooldown = enemy.fireRate;
+                    Vector2 direction = (player.position - firePoint.position).normalized;
+                    enemy.Shoot(direction);
+                }
             }
+        }
+        else
+        {
+            // Patrol when not provoked
+            Patrol();
         }
     }
 
@@ -73,21 +104,25 @@ public class PatrolAI : MonoBehaviour, IEnemyAI
         }
     }
 
-    void ShootAtPlayer()
+    void FlipTowardsPlayer()
     {
-        GameObject bulletPrefab = GetComponent<Enemy>()?.bulletPrefab;
-        if (bulletPrefab == null || firePoint == null) return;
+        if (player == null || firePoint == null) return;
 
-        Vector2 dir = (player.position - firePoint.position).normalized;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-    
-        if (bullet.TryGetComponent(out Bullet b))
+        bool shouldFaceRight = player.position.x > transform.position.x;
+
+        if (shouldFaceRight != isFacingRight)
         {
-            b.SetDirection(dir, 10f, "Enemy");
-            b.damage = config.damage;
+            isFacingRight = shouldFaceRight;
+
+            // Flip enemy's local X scale
+            Vector3 localScale = transform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * (isFacingRight ? 1 : -1);
+            transform.localScale = localScale;
+
+            // Flip firePoint's local scale to match facing direction
+            Vector3 fpScale = firePoint.localScale;
+            fpScale.x = Mathf.Abs(fpScale.x) * (isFacingRight ? 1 : -1);
+            firePoint.localScale = fpScale;
         }
-
-        Destroy(bullet, 3f);
     }
-
 }

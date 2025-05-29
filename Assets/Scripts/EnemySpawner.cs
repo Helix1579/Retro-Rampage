@@ -35,45 +35,39 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnRandomEnemyNearPlayer()
     {
-        float spawnX = Random.Range(player.position.x - spawnDistanceBehind, player.position.x + spawnDistanceAhead);
+        float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
+        float cameraEdgeX = player.position.x + cameraWidth / 2f;
+
+        float spawnX = Random.Range(cameraEdgeX + 2f, cameraEdgeX + spawnDistanceAhead); // Ensure spawn is outside the visible range
+
         Vector3 spawnPos;
         EnemyType randomType = GetRandomEnemyType();
 
-        if (randomType == EnemyType.Turret)
-        {
-            // Use Physics2D.Raycast for 2D games
-            Vector2 rayOrigin = new Vector2(spawnX, 10f); // start above
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, 20f);
+        // Ground detection via raycast for all enemies
+        Vector2 rayOrigin = new Vector2(spawnX, 10f); // start ray above
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, 20f);
 
-            if (hit.collider != null)
-            {
-                spawnPos = hit.point + Vector2.up * 0.1f;
-                Debug.Log($"✅ Turret spawned at ground point: {spawnPos}");
-            }
-            else
-            {
-                spawnPos = new Vector3(spawnX, 0f, 0f); // fallback
-                Debug.LogWarning("⚠️ Turret spawn: ground not found, defaulting to y = 0.");
-            }
+        if (hit.collider != null)
+        {
+            spawnPos = hit.point + Vector2.up * 0.1f;
+            Debug.Log($"✅ {randomType} spawned at ground point: {spawnPos}");
         }
         else
         {
-            float spawnY = Random.Range(spawnHeightMin, spawnHeightMax);
-            spawnPos = new Vector3(spawnX, spawnY, 0f);
+            Debug.LogWarning($"⚠️ {randomType} spawn: ground not found at {spawnX}, defaulting to y = 0.");
+            spawnPos = new Vector3(spawnX, 0f, 0f);
         }
 
-        // Create a modified config based on difficulty
-EnemyConfig config = new EnemyConfig
-{
-    fireDistance = enemyConfig.fireDistance,
-    pointA = enemyConfig.pointA,
-    pointB = enemyConfig.pointB,
+        // Config based on difficulty
+        EnemyConfig config = new EnemyConfig
+        {
+            fireDistance = enemyConfig.fireDistance,
+            pointA = enemyConfig.pointA,
+            pointB = enemyConfig.pointB,
+            damage = GameManager.Instance.currentDifficulty.enemyDamage
+        };
 
-    // 🔥 Override with difficulty-based damage
-    damage = GameManager.Instance.currentDifficulty.enemyDamage
-};
-GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
-
+        GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
 
         if (enemy != null)
         {
@@ -96,7 +90,6 @@ GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
         {
             case 0: return EnemyType.Patrol;
             case 1: return EnemyType.RangedChase;
-            case 2: return EnemyType.Turret;
             default: return EnemyType.Patrol;
         }
     }

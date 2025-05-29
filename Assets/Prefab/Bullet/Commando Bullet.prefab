@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8208120069365421035}
   - component: {fileID: 4508345019387949584}
   - component: {fileID: 1484123816053369676}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Commando Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -963791335356448533, guid: e7110af47129f8448ae3cddbdff530e2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.53, y: 1.54}
@@ -152,7 +152,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1484123816053369676
 MonoBehaviour:

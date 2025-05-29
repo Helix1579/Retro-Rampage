@@ -6,8 +6,7 @@ public class TurretAI : MonoBehaviour, IEnemyAI
     private EnemyConfig config;
     private Transform firePoint;
     private float fireCooldown;
-
-    private Enemy enemy; // ✅ cache prefab data
+    private EnemyShooter shooter;
 
     public void SetTarget(Transform target)
     {
@@ -17,8 +16,8 @@ public class TurretAI : MonoBehaviour, IEnemyAI
     public void Init(EnemyConfig cfg)
     {
         config = cfg;
-        enemy = GetComponent<Enemy>(); // ✅ store prefab reference
-        fireCooldown = enemy.fireRate;
+        shooter = GetComponent<EnemyShooter>();
+        fireCooldown = shooter.fireRate;
     }
 
     public void SetFirePoint(Transform fp)
@@ -28,34 +27,19 @@ public class TurretAI : MonoBehaviour, IEnemyAI
 
     void Update()
     {
-        if (player == null || firePoint == null || enemy == null) return;
+        if (player == null || firePoint == null || shooter == null) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= enemy.detectionRange)
+        if (distance <= shooter.attackRange)
         {
             fireCooldown -= Time.deltaTime;
             if (fireCooldown <= 0f)
             {
-                fireCooldown = enemy.fireRate;
-                ShootAtPlayer();
+                fireCooldown = shooter.fireRate;
+
+                Vector2 direction = (player.position - firePoint.position).normalized;
+                shooter.Shoot(direction);
             }
         }
-    }
-
-    void ShootAtPlayer()
-    {
-        GameObject bulletPrefab = enemy?.bulletPrefab;
-        if (bulletPrefab == null || firePoint == null) return;
-
-        Vector2 dir = (player.position - firePoint.position).normalized;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-
-        if (bullet.TryGetComponent(out Bullet b))
-        {
-            b.SetDirection(dir, 10f, "Enemy");
-            b.damage = config.damage;
-        }
-
-        Destroy(bullet, 3f);
     }
 }
