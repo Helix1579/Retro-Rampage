@@ -33,55 +33,64 @@ public class EnemySpawner : MonoBehaviour
         Debug.Log("Spawner Update running");
     }
 
-    void SpawnRandomEnemyNearPlayer()
+   void SpawnRandomEnemyNearPlayer()
+{
+    float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
+    float cameraEdgeX = player.position.x + cameraWidth / 2f;
+
+    float spawnX = Random.Range(cameraEdgeX + 2f, cameraEdgeX + spawnDistanceAhead);
+
+    Vector3 spawnPos;
+    EnemyType randomType = GetRandomEnemyType();
+
+    // Raycast to find ground
+    Vector2 rayOrigin = new Vector2(spawnX, 10f);
+    RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, 20f);
+
+    if (hit.collider != null)
     {
-        float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
-        float cameraEdgeX = player.position.x + cameraWidth / 2f;
+        spawnPos = hit.point + Vector2.up * 0.1f;
+        Debug.Log($"✅ {randomType} spawned at ground point: {spawnPos}");
+    }
+    else
+    {
+        Debug.LogWarning($"⚠️ {randomType} spawn: ground not found at {spawnX}, defaulting to y = 0.");
+        spawnPos = new Vector3(spawnX, 0f, 0f);
+    }
 
-        float spawnX = Random.Range(cameraEdgeX + 2f, cameraEdgeX + spawnDistanceAhead); // Ensure spawn is outside the visible range
+    // Set up config based on difficulty
+    EnemyConfig config = new EnemyConfig
+    {
+        fireDistance = enemyConfig.fireDistance,
+        pointA = enemyConfig.pointA,
+        pointB = enemyConfig.pointB,
+        damage = Difficulty.enemyDamage
+    };
 
-        Vector3 spawnPos;
-        EnemyType randomType = GetRandomEnemyType();
+    GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
 
-        // Ground detection via raycast for all enemies
-        Vector2 rayOrigin = new Vector2(spawnX, 10f); // start ray above
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, 20f);
+    if (enemy != null)
+    {
+        enemiesSpawned++;
+        enemiesAlive++;
 
-        if (hit.collider != null)
+        var enemyHealth = enemy.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
         {
-            spawnPos = hit.point + Vector2.up * 0.1f;
-            Debug.Log($"✅ {randomType} spawned at ground point: {spawnPos}");
-        }
-        else
-        {
-            Debug.LogWarning($"⚠️ {randomType} spawn: ground not found at {spawnX}, defaulting to y = 0.");
-            spawnPos = new Vector3(spawnX, 0f, 0f);
-        }
+            int healthToAssign = 1; // fallback
 
-        // Config based on difficulty
-        EnemyConfig config = new EnemyConfig
-        {
-            fireDistance = enemyConfig.fireDistance,
-            pointA = enemyConfig.pointA,
-            pointB = enemyConfig.pointB,
-            damage = GameManager.Instance.currentDifficulty.enemyDamage
-        };
+            if (enemy.GetComponent<TurretAI>() != null)
+                healthToAssign = Difficulty.turretHealth;
+            else if (enemy.GetComponent<PatrolAI>() != null)
+                healthToAssign = Difficulty.patrolHealth;
+            else if (enemy.GetComponent<RangedChaseAI>() != null)
+                healthToAssign = Difficulty.rangedChaseHealth;
 
-        GameObject enemy = enemyFactory.SpawnEnemy(randomType, spawnPos, config);
-
-        if (enemy != null)
-        {
-            enemiesSpawned++;
-            enemiesAlive++;
-
-            var enemyHealth = enemy.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.SetHealth(GameManager.Instance.currentDifficulty.enemyHealth);
-                enemyHealth.OnDeathEvent += () => enemiesAlive--;
-            }
+            enemyHealth.SetHealth(healthToAssign);
+            enemyHealth.OnDeathEvent += () => enemiesAlive--;
         }
     }
+}
 
     EnemyType GetRandomEnemyType()
     {

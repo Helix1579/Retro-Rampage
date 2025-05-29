@@ -21,26 +21,28 @@ public DifficultySetting rampageSettings;
 
 
     public void SetDifficulty(string difficulty)
-{
-    switch (difficulty)
     {
-        case "Noob":
-            currentDifficulty = noobSettings;
-            break;
-        case "Pro":
-            currentDifficulty = proSettings;
-            break;
-        case "Rampage":
-            currentDifficulty = rampageSettings;
-            break;
-        default:
-            Debug.LogWarning("Unknown difficulty selected, using Pro as default.");
-            currentDifficulty = proSettings;
-            break;
+        switch (difficulty)
+        {
+            case "Noob":
+                currentDifficulty = noobSettings;
+                break;
+            case "Pro":
+                currentDifficulty = proSettings;
+                break;
+            case "Rampage":
+                currentDifficulty = rampageSettings;
+                break;
+            default:
+                Debug.LogWarning("Unknown difficulty selected, using Pro as default.");
+                currentDifficulty = proSettings;
+                break;
+        }
+
+        Debug.Log($"Difficulty selected: {currentDifficulty.level}");
+        // Initialize the boss after setting difficulty
     }
 
-    Debug.Log($"Difficulty selected: {currentDifficulty.level}");
-}
 
     private void Awake()
     {

@@ -1575,26 +1575,38 @@ MonoBehaviour:
     level: 0
     maxEnemiesToSpawn: 0
     maxEnemiesAliveAtOnce: 0
-    enemyHealth: 0
     enemyDamage: 0
+    turretHealth: 0
+    patrolHealth: 0
+    rangedChaseHealth: 0
+    bossHealth: 0
   noobSettings:
     level: 0
     maxEnemiesToSpawn: 50
     maxEnemiesAliveAtOnce: 10
-    enemyHealth: 50
     enemyDamage: 20
+    turretHealth: 5
+    patrolHealth: 0
+    rangedChaseHealth: 0
+    bossHealth: 10
   proSettings:
     level: 0
     maxEnemiesToSpawn: 50
     maxEnemiesAliveAtOnce: 10
-    enemyHealth: 50
     enemyDamage: 20
+    turretHealth: 0
+    patrolHealth: 0
+    rangedChaseHealth: 0
+    bossHealth: 0
   rampageSettings:
     level: 0
     maxEnemiesToSpawn: 50
     maxEnemiesAliveAtOnce: 20
-    enemyHealth: 50
     enemyDamage: 20
+    turretHealth: 0
+    patrolHealth: 0
+    rangedChaseHealth: 0
+    bossHealth: 0
 --- !u!4 &325765449
 Transform:
   m_ObjectHideFlags: 0
@@ -1906,6 +1918,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 559840730}
+    - target: {fileID: 6359693043984645725, guid: 68ca2df2805400747805c6594e140039,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6910878214581894551, guid: 68ca2df2805400747805c6594e140039,
         type: 3}
       propertyPath: m_Name
@@ -1971,10 +1988,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6359693043984645725, guid: 68ca2df2805400747805c6594e140039, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6910878214581894551, guid: 68ca2df2805400747805c6594e140039,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1260205492}
   m_SourcePrefab: {fileID: 100100000, guid: 68ca2df2805400747805c6594e140039, type: 3}
 --- !u!1 &596815017
 GameObject:
@@ -3081,6 +3103,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1260205485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6910878214581894551, guid: 68ca2df2805400747805c6594e140039,
+    type: 3}
+  m_PrefabInstance: {fileID: 591215694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260205492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260205485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a5d538936bd451784b6302f73c081c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  scoreValue: 10
 --- !u!1 &1331793489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,6 +7414,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 559840730}
+    - target: {fileID: 3416929562737751343, guid: eff365697f8eb4aec91325ac6f85246c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3416929562737751343, guid: eff365697f8eb4aec91325ac6f85246c,
         type: 3}
       propertyPath: enemyFactory

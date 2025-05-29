@@ -27,9 +27,33 @@ public void OnSelectDifficulty(string difficulty)
     Time.timeScale = 1f;
     gameObject.SetActive(false);         // Hide menu canvas
     gameplayGroup.SetActive(true);       // Show gameplay elements
+    if (GameManager.Instance != null)
+        {
+            // Find the boss *now* that it's active
+            BossAI boss = FindObjectOfType<BossAI>();
+            TurretAI[] turrets = FindObjectsOfType<TurretAI>();
+foreach (var turret in turrets)
+{
+    turret.InitializeTurret();
+}
+            
+            if (boss != null)
+            {
+                boss.InitializeBoss(); // Call the boss's initialization method
+                Debug.Log("MainMenuManager: BossAI initialized after gameplay group activated.");
+            }
+            else
+            {
+                Debug.LogError("MainMenuManager: BossAI not found after activating gameplay group! Is it part of gameplayGroup or active?");
+            }
+        }
+        else
+        {
+            Debug.LogError("MainMenuManager: GameManager instance is null!");
+        }
 
-    // ✅ Switch to gameplay music
-    MusicManager.Instance?.PlayGameplayMusic();
+        // ✅ Switch to gameplay music
+        MusicManager.Instance?.PlayGameplayMusic();
 }
 
 
