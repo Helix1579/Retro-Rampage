@@ -8,9 +8,12 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
     private EnemyConfig config;
     private Transform firePoint;
     private float fireCooldown;
-    
-    private Enemy enemy;
+
+    private EnemyShooter enemy;
     private bool isProvoked = false;
+
+    private bool isFacingRight = true;
+    private Vector3 firePointOriginalLocalPos;
 
     public void SetTarget(Transform target)
     {
@@ -20,8 +23,13 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
     public void Init(EnemyConfig cfg)
     {
         config = cfg;
-        enemy = GetComponent<Enemy>();
+        enemy = GetComponent<EnemyShooter>();
         agent = GetComponent<NavMeshAgent>();
+        
+        if (enemy != null)
+        {
+            enemy.SetConfig(cfg);
+        }
 
         if (agent)
         {
@@ -33,6 +41,8 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
     public void SetFirePoint(Transform fp)
     {
         firePoint = fp;
+        firePointOriginalLocalPos = firePoint.localPosition; // Cache the original position
+        Debug.Log("Assigned FirePoint at localPosition.x = " + firePoint.localPosition.x);
     }
 
     void Update()
@@ -42,18 +52,18 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
         float distance = Vector2.Distance(transform.position, player.position);
 
         // Engage if within detection range
-        if (distance <= enemy.detectionRange)
+        if (distance <= enemy.attackRange)
         {
             isProvoked = true;
             Debug.Log("Provoked");
         }
 
         // Disengage if outside detection range + buffer
-        if (distance > enemy.detectionRange + 1f)
+        if (distance > enemy.attackRange + 1f)
         {
             isProvoked = false;
             agent.ResetPath();
-            Debug.Log("not Provoked");
+            Debug.Log("Not Provoked");
             return;
         }
 
@@ -69,34 +79,42 @@ public class RangedChaseAI : MonoBehaviour, IEnemyAI
         {
             // Stop and shoot
             agent.ResetPath();
+            FlipTowardsPlayer();
             fireCooldown -= Time.deltaTime;
 
-            // 🔐 Extra safety: skip shooting if player left detection range
-            if (distance <= enemy.detectionRange && fireCooldown <= 0f && firePoint != null)
+            fireCooldown -= Time.deltaTime;
+            if (fireCooldown <= 0f)
             {
                 fireCooldown = enemy.fireRate;
-                ShootAtPlayer();
+
+                Vector2 direction = (player.position - firePoint.position).normalized;
+                enemy.Shoot(direction);
             }
+
         }
-        
-        // Debug.Log($"Distance: {distance}, Provoked: {isProvoked}, Detection: {enemy.detectionRange}, FireDistance: {config.fireDistance}");
     }
 
-
-    void ShootAtPlayer()
+    void FlipTowardsPlayer()
     {
-        GameObject bulletPrefab = enemy?.bulletPrefab;
-        if (bulletPrefab == null || firePoint == null) return;
+        if (player == null || firePoint == null) return;
 
-        Vector2 dir = (player.position - firePoint.position).normalized;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Debug.Log("Enemy scale: " + transform.localScale + ", FirePoint localPos: " + firePoint.localPosition);
 
-        if (bullet.TryGetComponent(out Bullet b))
+        bool shouldFaceRight = player.position.x > transform.position.x;
+
+        if (shouldFaceRight != isFacingRight)
         {
-            b.SetDirection(dir, 10f, "Enemy");
-            b.damage = config.damage;
-        }
+            isFacingRight = shouldFaceRight;
 
-        Destroy(bullet, 3f);
+            // Flip enemy's local X scale
+            Vector3 localScale = transform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * (isFacingRight ? 1 : -1);
+            transform.localScale = localScale;
+
+            // Flip firePoint's local scale to match facing direction
+            Vector3 fpScale = firePoint.localScale;
+            fpScale.x = Mathf.Abs(fpScale.x) * (isFacingRight ? 1 : -1);
+            firePoint.localScale = fpScale;
+        }
     }
 }

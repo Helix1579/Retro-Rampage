@@ -15,7 +15,8 @@ public class BossAI : MonoBehaviour
     [Header("Phase Thresholds")]
     public int phase2Threshold = 70;
     public int phase3Threshold = 35;
-
+    
+    
     private EnemyHealth bossHealth;
 
     void Awake()
@@ -24,7 +25,7 @@ public class BossAI : MonoBehaviour
         bossHealth.OnDeathEvent += OnBossDeath;
 
         foreach (var turret in turrets)
-            turret.target = player;
+            turret.Target = player;
 
         SetTurretsFireRate(phaseFireRates[0]);
     }

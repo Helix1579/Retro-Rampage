@@ -2,44 +2,55 @@ using UnityEngine;
 
 public class TurretController : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bulletPrefab;
-    public float fireRate = 1f;
-    public float detectionRange = 5f;
-    public Transform target;
-
+    private float fireRate;
     private float fireCooldown;
+    private EnemyShooter shooter;
+    private Transform target;
+    
+    public Transform Target
+    {
+        get => target;
+        set => target = value;
+    }
+
+    void Awake()
+    {
+        shooter = GetComponent<EnemyShooter>();
+        target = shooter.player;
+
+        if (shooter == null)
+        {
+            Debug.LogError("TurretController requires an EnemyShooter component.");
+        }
+        else
+        {
+            shooter.fireRate = fireRate; // Sync rate with EnemyShooter's fireRate
+        }
+    }
 
     void Update()
     {
-        if (target == null) return;
+        if (target == null || shooter == null) return;
 
         float distance = Vector2.Distance(transform.position, target.position);
-        if (distance > detectionRange) return;
+        if (distance > shooter.attackRange) return;
 
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f)
         {
             fireCooldown = fireRate;
-            Shoot();
+
+            Vector2 direction = (target.position - shooter.firePoint.position).normalized;
+            shooter.Shoot(direction);
         }
-    }
-
-    void Shoot()
-    {
-        if (bulletPrefab == null || firePoint == null) return;
-
-        Vector2 direction = (target.position - firePoint.position).normalized;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-
-        if (bullet.TryGetComponent(out Bullet b))
-            b.SetDirection(direction, 10f, "Enemy");
-
-        Destroy(bullet, 3f);
     }
 
     public void UpdateFireRate(float newRate)
     {
         fireRate = newRate;
+        if (shooter != null)
+        {
+            shooter.fireRate = newRate;
+        }
     }
 }

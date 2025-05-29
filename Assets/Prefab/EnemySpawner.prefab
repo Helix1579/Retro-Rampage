@@ -44,19 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73bcf4ce19cf47b09b12babaf105ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFactory: {fileID: 0}
+  enemyFactory: {fileID: 5530350645716888001, guid: 47cb97d2613734813909941a926a0bab,
+    type: 3}
   enemyConfig:
     damage: 1
-    fireRate: 0.1
-    detectionRange: 5
-    bulletPrefab: {fileID: 3230629352235638825, guid: a2f189e3f58ad8e4881838167309d791,
-      type: 3}
     pointA: {fileID: 0}
     pointB: {fileID: 0}
     fireDistance: 4
   player: {fileID: 1784462618488185903, guid: 6c5a0d13b9031b947879e65168ae1153, type: 3}
-  maxEnemiesToSpawn: 50
-  maxEnemiesAliveAtOnce: 10
   spawnDistanceAhead: 15
   spawnDistanceBehind: 5
   spawnHeightMin: -1
