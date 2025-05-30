@@ -24,22 +24,69 @@ public class BossAI : MonoBehaviour
     
     
     private EnemyHealth bossHealth;
+        private bool isInitialized = false;
 
-    void Awake()
+   void Awake()
     {
         bossHealth = GetComponent<EnemyHealth>();
+        if (bossHealth == null)
+        {
+            Debug.LogError("BossAI: EnemyHealth component not found on this GameObject!");
+            enabled = false; // Disable the script if it can't function
+            return;
+        }
+
+        // <<< IMPORTANT CHANGE: DO NOT set health here. It's too early.
         bossHealth.OnDeathEvent += OnBossDeath;
 
+        // Turret target can be set here as it doesn't depend on difficulty
         foreach (var turret in turrets)
             turret.Target = player;
 
-        bossHp = bossHealth.CurrentHealth;
+        // Debug.Log($"BossAI: Awake completed. Awaiting full initialization."); // Optional: for debugging
+    }
+
+    // <<< NEW METHOD: Call this after difficulty is set
+    public void InitializeBoss()
+    {
+        if (isInitialized)
+        {
+            Debug.LogWarning("BossAI: Attempted to initialize boss multiple times.");
+            return; // Prevent re-initialization
+        }
+
+        int bossStartHealth = 100; // Default fallback if GameManager is not ready
+        if (GameManager.Instance != null)
+        {
+            if (GameManager.Instance.currentDifficulty != null)
+            {
+                bossStartHealth = GameManager.Instance.currentDifficulty.bossHealth;
+                Debug.Log($"BossAI: Initializing with {bossStartHealth} HP from GameManager.");
+            }
+            else
+            {
+                Debug.LogWarning("BossAI: GameManager.Instance.currentDifficulty is null during InitializeBoss. Using default 100 HP.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("BossAI: GameManager.Instance is null during InitializeBoss. Using default 100 HP.");
+        }
+
+        bossHealth.SetHealth(bossStartHealth); // <<< Health is set here!
+        bossHp = bossHealth.CurrentHealth; // Update the internal tracking variable
+
+        // Set initial turret fire rate, prefab, etc.
         SetTurretsFireRate(phaseFireRates[0], bulletPrefabs[0], phaseAttackRange[0], turretSprites[0]);
+        Debug.Log($"BossAI: Fully initialized with {bossHp} HP, starting phase: {currentPhase}");
+        
+        isInitialized = true; // Mark as initialized
     }
 
     void Update()
     {
-        if (currentPhase == BossPhase.Dead || player == null) return;
+        // <<< IMPORTANT CHANGE: Only run Update logic if initialized
+        if (!isInitialized || currentPhase == BossPhase.Dead || player == null) return;
 
         int currentHp = bossHealth.CurrentHealth;
 
@@ -49,6 +96,7 @@ public class BossAI : MonoBehaviour
             bossHp = currentHp;
         }
     }
+
 
     void HandlePhaseTransition(int hp)
     {
