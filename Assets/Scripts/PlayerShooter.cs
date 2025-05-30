@@ -22,6 +22,7 @@ public class PlayerShooter : Weapon, IShooter
         if (baseWeapon != null && unlockedWeapons.Count == 0)
         {
             unlockedWeapons.Add(baseWeapon);
+            UpdateWeaponFromData();
             UpdateWeaponUI();
         }
     }
@@ -33,7 +34,7 @@ public class PlayerShooter : Weapon, IShooter
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
             Vector2 direction = GetShootDirection();
-            TryShoot(direction, "Player");
+            Shoot(direction);
         }
 
         if (Input.GetKeyDown(KeyCode.H))
@@ -51,18 +52,20 @@ public class PlayerShooter : Weapon, IShooter
 
             // Auto-select the newly unlocked weapon
             currentWeaponIndex = unlockedWeapons.Count - 1;
+            UpdateWeaponFromData();
             UpdateWeaponUI();
         }
     }
-    
+
     public void ResetWeapons()
     {
         unlockedWeapons.Clear();
-    
+
         if (baseWeapon != null)
         {
             unlockedWeapons.Add(baseWeapon);
             currentWeaponIndex = 0;
+            UpdateWeaponFromData();
             UpdateWeaponUI();
             Debug.Log("Weapons reset to base weapon.");
         }
@@ -72,12 +75,12 @@ public class PlayerShooter : Weapon, IShooter
         }
     }
 
-
     private void SwitchWeapon()
     {
         if (unlockedWeapons.Count <= 1) return;
 
         currentWeaponIndex = (currentWeaponIndex + 1) % unlockedWeapons.Count;
+        UpdateWeaponFromData();
         UpdateWeaponUI();
     }
 
@@ -87,6 +90,17 @@ public class PlayerShooter : Weapon, IShooter
         {
             weaponUI.UpdateWeapon(unlockedWeapons[currentWeaponIndex].weaponName);
         }
+    }
+
+    private void UpdateWeaponFromData()
+    {
+        if (unlockedWeapons.Count == 0) return;
+
+        WeaponData weapon = unlockedWeapons[currentWeaponIndex];
+        bulletPrefab = weapon.bulletPrefab;
+        fireRate = weapon.fireRate;
+        damage = weapon.damage;
+        nextFireTime = 0f;
     }
 
     private Vector2 GetShootDirection()
@@ -100,26 +114,11 @@ public class PlayerShooter : Weapon, IShooter
         return new Vector2(h, v).normalized;
     }
 
-    public override void TryShoot(Vector2 direction, string shooterTag)
-    {
-        if (unlockedWeapons.Count == 0) return;
-
-        WeaponData weapon = unlockedWeapons[currentWeaponIndex];
-        nextFireTime = Time.time + weapon.fireRate;
-
-        GameObject bulletObj = Instantiate(weapon.bulletPrefab, firePoint.position, Quaternion.identity);
-        Bullet bullet = bulletObj.GetComponent<Bullet>();
-        if (bullet != null)
-        {
-            bullet.SetDirection(direction, bulletSpeed, shooterTag);
-            bullet.damage = weapon.damage;
-        }
-
-        Destroy(bulletObj, bulletLifeTime);
-    }
-
     public void Shoot(Vector2 direction)
     {
+        if (Time.time < nextFireTime) return;
+
+        nextFireTime = Time.time + fireRate;
         TryShoot(direction, "Player");
     }
 }

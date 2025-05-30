@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d6050268bec4e4ca5dd148028eb7de, type: 3}
   m_Name: WeaponUnlock2
   m_EditorClassIdentifier: 
-  weaponName: PKM
-  bulletPrefab: {fileID: 3230629352235638825, guid: a2f189e3f58ad8e4881838167309d791,
+  weaponName: Electro Gun
+  bulletPrefab: {fileID: 5510440849764714536, guid: a4438762138eefb4698d2abc737aac74,
     type: 3}
   damage: 10
-  fireRate: 0.2
+  fireRate: 0.5

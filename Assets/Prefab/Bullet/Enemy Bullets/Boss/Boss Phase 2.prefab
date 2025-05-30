@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3639959540363393434}
   - component: {fileID: 3844377157795422067}
   m_Layer: 3
-  m_Name: Boss Turret Bullet
+  m_Name: Boss Phase 2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 117.4857, y: -8.145157, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5225540622116197949, guid: b234f03316011de44b65da1e3034922d,
+  m_Sprite: {fileID: -690740176901023012, guid: 7d00f78e9f1c2ac439184adf421902ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -152,8 +152,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.049314857, y: 0}
-  m_Radius: 0.05394411
+  m_Offset: {x: 2.3482146, y: -0.013730186}
+  m_Radius: 0.09476117
 --- !u!114 &3844377157795422067
 MonoBehaviour:
   m_ObjectHideFlags: 0
