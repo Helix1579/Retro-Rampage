@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BaseWeapon
   m_EditorClassIdentifier: 
   weaponName: HK416
-  bulletPrefab: {fileID: 3230629352235638825, guid: a2f189e3f58ad8e4881838167309d791,
+  bulletPrefab: {fileID: 3541673061971706785, guid: a2f189e3f58ad8e4881838167309d791,
     type: 3}
   damage: 100
   fireRate: 0.2

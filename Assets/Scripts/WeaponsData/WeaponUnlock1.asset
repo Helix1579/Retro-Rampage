@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d6050268bec4e4ca5dd148028eb7de, type: 3}
   m_Name: WeaponUnlock1
   m_EditorClassIdentifier: 
-  weaponName: AWM
-  bulletPrefab: {fileID: 3230629352235638825, guid: a2f189e3f58ad8e4881838167309d791,
+  weaponName: Machine Gun
+  bulletPrefab: {fileID: 1250897827542107393, guid: fa09de67188e5da4797e11c22bbcd9ad,
     type: 3}
-  damage: 3
-  fireRate: 0.2
+  damage: 1
+  fireRate: 0.05
