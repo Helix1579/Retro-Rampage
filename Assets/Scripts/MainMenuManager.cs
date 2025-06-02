@@ -1,48 +1,78 @@
+
+
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.EventSystems; // Required for EventSystem
+using UnityEngine.UI; // Required for Button component
 
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject difficultyPanel;
     public GameObject gameplayGroup;
+    public GameObject playButton; // Assign your Play Button GameObject here in the Inspector
+    public Button firstDifficultyButton; // Assign the first difficulty button (e.g., Easy) here
 
-private void Start()
-{
-    Time.timeScale = 0f;
-
-    difficultyPanel.SetActive(false);
-    gameplayGroup.SetActive(false);
-
-    // ✅ Play menu music immediately when main menu appears
-    if (MusicManager.Instance != null)
+    private void Start()
     {
-        MusicManager.Instance.PlayMenuMusic();
+        // Pause the game initially
+        Time.timeScale = 0f;
+
+        // Hide difficulty and gameplay elements
+        difficultyPanel.SetActive(false);
+        gameplayGroup.SetActive(false);
+
+        // ✅ Play menu music immediately when main menu appears
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayMenuMusic();
+        }
+
+        // --- IMPORTANT: Set the initially selected UI element for gamepad navigation ---
+        // Ensure the EventSystem exists in your scene (usually added automatically with a Canvas).
+        // Set the 'playButton' as the currently selected GameObject.
+        if (EventSystem.current != null && playButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(playButton);
+            Debug.Log("MainMenuManager: Play Button set as initial selected GameObject for EventSystem.");
+        }
+        else
+        {
+            if (EventSystem.current == null)
+            {
+                Debug.LogError("MainMenuManager: EventSystem not found in the scene! Please ensure you have an EventSystem GameObject.");
+            }
+            if (playButton == null)
+            {
+                Debug.LogError("MainMenuManager: Play Button GameObject is not assigned in the Inspector!");
+            }
+        }
     }
-    void Start()
+
+
+    public void OnSelectDifficulty(string difficulty)
     {
-        // EventSystem.current.SetSelectedGameObject();
-    }
+        GameManager.Instance?.SetDifficulty(difficulty);
 
-}
+        Time.timeScale = 1f;
+        gameObject.SetActive(false);         // Hide menu canvas
+        gameplayGroup.SetActive(true);       // Show gameplay elements
 
+        // Clear selected UI element to prevent accidental input after game starts
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            Debug.Log("MainMenuManager: Cleared selected GameObject as gameplay starts.");
+        }
 
-public void OnSelectDifficulty(string difficulty)
-{
-    GameManager.Instance?.SetDifficulty(difficulty);
-
-    Time.timeScale = 1f;
-    gameObject.SetActive(false);         // Hide menu canvas
-    gameplayGroup.SetActive(true);       // Show gameplay elements
-    if (GameManager.Instance != null)
+        if (GameManager.Instance != null)
         {
             // Find the boss *now* that it's active
             BossAI boss = FindObjectOfType<BossAI>();
             TurretAI[] turrets = FindObjectsOfType<TurretAI>();
-foreach (var turret in turrets)
-{
-    turret.InitializeTurret();
-}
-            
+            foreach (var turret in turrets)
+            {
+                turret.InitializeTurret();
+            }
+
             if (boss != null)
             {
                 boss.InitializeBoss(); // Call the boss's initialization method
@@ -60,8 +90,7 @@ foreach (var turret in turrets)
 
         // ✅ Switch to gameplay music
         MusicManager.Instance?.PlayGameplayMusic();
-}
-
+    }
 
 
     public void OnPlayPressed()
@@ -70,9 +99,26 @@ foreach (var turret in turrets)
         difficultyPanel.SetActive(true);
 
         // Hide play button (optional if needed)
-        GameObject playButton = GameObject.Find("PlayButton");
         if (playButton != null)
             playButton.SetActive(false);
-    }
 
+        // --- IMPORTANT: Set the initially selected UI element for the difficulty panel ---
+        // After the difficulty panel is shown, set the first difficulty button as selected.
+        if (EventSystem.current != null && firstDifficultyButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(firstDifficultyButton.gameObject);
+            Debug.Log("MainMenuManager: First Difficulty Button set as initial selected GameObject for EventSystem.");
+        }
+        else
+        {
+            if (EventSystem.current == null)
+            {
+                Debug.LogError("MainMenuManager: EventSystem not found when trying to select difficulty button!");
+            }
+            if (firstDifficultyButton == null)
+            {
+                Debug.LogError("MainMenuManager: First Difficulty Button is not assigned in the Inspector!");
+            }
+        }
+    }
 }
