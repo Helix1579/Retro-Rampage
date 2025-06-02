@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioClip jumpClip;
+    public AudioClip runClip;
+
+    public AudioSource audioSource;
+    private bool isRunningSoundPlaying = false;
+    
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
-    public float speed;
-    public float jumpForce;
     private float moveInput;
     private bool isGrounded;
+    private bool m_FacingRight = true;
+    private Vector3 startPosition;
+    
+    public float speed;
+    public float jumpForce;
     public Rigidbody2D RigidBody;
     [SerializeField] private Animator animator;
-    
-    private bool m_FacingRight = true;
     public bool IsFacingRight => m_FacingRight;
-
-    
-    private Vector3 startPosition;
 
     private void Awake()
     {
         startPosition = transform.position;
+        // audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -38,10 +44,35 @@ public class PlayerController : MonoBehaviour
         
         animator.SetBool("isRunning", moveInput != 0 );
 
-        if (Input.GetButtonDown("Jump") && isGrounded == false)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             RigidBody.AddForce(new Vector2(RigidBody.linearVelocity.x, jumpForce));
             animator.SetBool("isJumping", true);
+
+            if (jumpClip != null)
+            {
+                audioSource.PlayOneShot(jumpClip);
+            }
+        }
+
+        // ✅ Running sound
+        if (Mathf.Abs(moveInput) > 0.1f && isGrounded)
+        {
+            if (!isRunningSoundPlaying && runClip != null)
+            {
+                audioSource.clip = runClip;
+                audioSource.loop = true;
+                audioSource.Play();
+                isRunningSoundPlaying = true;
+            }
+        }
+        else
+        {
+            if (isRunningSoundPlaying)
+            {
+                audioSource.Stop();
+                isRunningSoundPlaying = false;
+            }
         }
         
 
@@ -67,7 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false; // Should be true when touching ground
+            isGrounded = true; // Should be true when touching ground
             animator.SetBool("isJumping", false);
         }
     }
@@ -76,7 +107,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true; // Should be false when leaving ground
+            isGrounded = false; // Should be false when leaving ground
         }
     }
     

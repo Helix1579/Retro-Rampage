@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73d6050268bec4e4ca5dd148028eb7de, type: 3}
-  m_Name: BaseWeapon
+  m_Name: HK 416
   m_EditorClassIdentifier: 
   weaponName: HK416
   bulletPrefab: {fileID: 3541673061971706785, guid: a2f189e3f58ad8e4881838167309d791,
     type: 3}
   damage: 1
   fireRate: 0.2
+  fireSound: {fileID: 8300000, guid: 416e26714fb06ea4da48ef8ebd8c7955, type: 3}
