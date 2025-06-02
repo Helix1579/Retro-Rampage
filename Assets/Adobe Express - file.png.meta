@@ -215,6 +215,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -935,7 +961,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Adobe Express - file_0: 6630341104690361922
+      Adobe Express - file_1: 5275507912062409062
+      Adobe Express - file_10: 606600053603804277
+      Adobe Express - file_11: -2091561106634977365
+      Adobe Express - file_12: -3159067870064184899
+      Adobe Express - file_13: -1201330683048254592
+      Adobe Express - file_14: -2413984917635379104
+      Adobe Express - file_15: 1975763434690390534
+      Adobe Express - file_16: -4013111525665030299
+      Adobe Express - file_17: -7794304624134856571
+      Adobe Express - file_18: -974352992286973347
+      Adobe Express - file_19: 2509578584766843728
+      Adobe Express - file_2: -2692636429404099553
+      Adobe Express - file_20: 8275890079268945255
+      Adobe Express - file_21: -2283843462272552597
+      Adobe Express - file_22: 2074430340387461288
+      Adobe Express - file_23: 2060117961315298889
+      Adobe Express - file_24: -2047813356129509954
+      Adobe Express - file_25: -5871907787791158920
+      Adobe Express - file_26: 5039014010641908185
+      Adobe Express - file_27: 8762602468191238306
+      Adobe Express - file_28: 5371047563092346280
+      Adobe Express - file_29: -1895315368906367544
+      Adobe Express - file_3: -1243630507843696839
+      Adobe Express - file_30: 411146184520828153
+      Adobe Express - file_31: -7371852804890648507
+      Adobe Express - file_4: -1424878099036736109
+      Adobe Express - file_5: 6921825447989403025
+      Adobe Express - file_6: -2605253323673997438
+      Adobe Express - file_7: -3159428422603908204
+      Adobe Express - file_8: -7881791939387689742
+      Adobe Express - file_9: 273554804608077158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

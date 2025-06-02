@@ -8,6 +8,7 @@ public class WeaponUI : MonoBehaviour
 
     public void UpdateWeapon(Sprite icon)
     {
+        Debug.Log("Updating weapon icon: " + (icon != null ? icon.name : "null"));
         if (weaponIcon != null)
         {
             weaponIcon.sprite = icon;
