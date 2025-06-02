@@ -90,7 +90,7 @@ public class PlayerShooter : Weapon, IShooter
     {
         if (weaponUI != null && unlockedWeapons.Count > 0)
         {
-            weaponUI.UpdateWeapon(unlockedWeapons[currentWeaponIndex].weaponName);
+            weaponUI.UpdateWeapon(unlockedWeapons[currentWeaponIndex].weaponIcon);
         }
     }
 
@@ -102,6 +102,7 @@ public class PlayerShooter : Weapon, IShooter
         bulletPrefab = weapon.bulletPrefab;
         fireRate = weapon.fireRate;
         damage = weapon.damage;
+        fireSound = weapon.fireSound;
         nextFireTime = 0f;
     }
 

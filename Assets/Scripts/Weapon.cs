@@ -8,7 +8,11 @@ public abstract class Weapon : MonoBehaviour
     public float fireRate = 0.2f;
     public int damage = 1;
     public float bulletLifeTime = 2f;
+    public AudioClip fireSound;
+    public AudioSource audioSource;
+    
     protected float fireCooldown;
+    
     protected EnemyConfig currentConfig;
 
     protected virtual void Update()
@@ -16,7 +20,7 @@ public abstract class Weapon : MonoBehaviour
         fireCooldown -= Time.deltaTime;
     }
 
-    public virtual void TryShoot(Vector2 direction, string shooterTag)
+    public void TryShoot(Vector2 direction, string shooterTag)
     {
         if (fireCooldown > 0f || bulletPrefab == null || firePoint == null)
             return;
@@ -36,6 +40,12 @@ public abstract class Weapon : MonoBehaviour
 
             bullet.SetDirection(direction, speed, shooterTag);
             bullet.damage = bulletDamage;
+        }
+        
+        if (fireSound != null)
+        {
+            // Get or cache the AudioSource
+            audioSource.PlayOneShot(fireSound);
         }
 
         Destroy(bulletObj, bulletLifeTime);

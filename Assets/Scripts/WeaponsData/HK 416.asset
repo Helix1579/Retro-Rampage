@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73d6050268bec4e4ca5dd148028eb7de, type: 3}
-  m_Name: WeaponUnlock1
+  m_Name: HK 416
   m_EditorClassIdentifier: 
-  weaponName: Machine Gun
-  bulletPrefab: {fileID: 1250897827542107393, guid: fa09de67188e5da4797e11c22bbcd9ad,
+  weaponName: HK416
+  bulletPrefab: {fileID: 3541673061971706785, guid: a2f189e3f58ad8e4881838167309d791,
     type: 3}
   damage: 1
-  fireRate: 0.05
+  fireRate: 0.2
+  fireSound: {fileID: 8300000, guid: 416e26714fb06ea4da48ef8ebd8c7955, type: 3}
+  weaponIcon: {fileID: -2605253323673997438, guid: b219df56ce8454283ab4c1e84d41a4a6,
+    type: 3}
