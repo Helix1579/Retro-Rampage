@@ -67,18 +67,20 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            isGrounded = false; // Should be true when touching ground
             animator.SetBool("isJumping", false);
         }
     }
-    
+
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            isGrounded = true; // Should be false when leaving ground
         }
     }
+    
+
     
     public void ResetPlayer()
     {

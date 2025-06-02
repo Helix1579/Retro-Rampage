@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_0: 2615723394607184497
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_1: 230538653823229889
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_2: -4901702073052137758
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_3: -8929408557533394825
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_4: -4648954189280808350
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_5: -690740176901023012
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_6: 5285044643851530559
+      beam-laser-effect-weapon-gun-game-vector_107791-19086-Photoroom_7: 2213533778840296193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -30,14 +30,16 @@ public class PlayerShooter : Weapon, IShooter
     protected override void Update()
     {
         base.Update();
+        bool fire = Input.GetButton("Fire1") || Input.GetAxis("FireRT") > 0.5f;
 
-        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
+
+        if (fire && Time.time >= nextFireTime)
         {
             Vector2 direction = GetShootDirection();
             Shoot(direction);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetButtonDown("SwitchWeapon"))
         {
             SwitchWeapon();
         }
