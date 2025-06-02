@@ -16,13 +16,22 @@ public class PlayerHealth : BaseHealth
             OnHealthChanged += healthBar.SetHealth;
         }
     }
-    
-
-
 
     protected override void Die()
     {
         Debug.Log("Player died!");
+        GameOverMenu gameOver = FindObjectOfType<GameOverMenu>();
+        if (gameOver == null)
+        {
+            Debug.LogError("GameOverScript not found in the scene!");
+            return;
+        }
+
+        if (gameOver != null)
+        {
+            gameOver.ShowGameOver();
+        }
+
         gameObject.SetActive(false);
     }
 }
