@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -17,6 +18,11 @@ private void Start()
     {
         MusicManager.Instance.PlayMenuMusic();
     }
+    void Start()
+    {
+        // EventSystem.current.SetSelectedGameObject();
+    }
+
 }
 
 
