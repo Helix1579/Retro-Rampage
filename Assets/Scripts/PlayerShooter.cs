@@ -15,6 +15,8 @@ public class PlayerShooter : Weapon, IShooter
 
     private PlayerController playerController;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
         playerController = GetComponentInParent<PlayerController>();
@@ -114,6 +116,15 @@ public class PlayerShooter : Weapon, IShooter
             bullet.SetDirection(direction, bulletSpeed, shooterTag);
             bullet.damage = weapon.damage;
         }
+
+        if (weapon.shootSound != null)
+    {
+        // Get or cache the AudioSource
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+
+        audioSource.PlayOneShot(weapon.shootSound);
+    }
 
         Destroy(bulletObj, bulletLifeTime);
     }

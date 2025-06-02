@@ -7,4 +7,8 @@ public class WeaponData : ScriptableObject
     public GameObject bulletPrefab;
     public int damage = 1;
     public float fireRate = 0.2f;
+
+    [Header("Audio")]
+public AudioClip shootSound;
+
 }

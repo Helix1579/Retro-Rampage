@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,48 +12,79 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     public Rigidbody2D RigidBody;
     [SerializeField] private Animator animator;
-    
+
     private bool m_FacingRight = true;
     public bool IsFacingRight => m_FacingRight;
 
-    
+    [Header("Audio")]
+    public AudioClip jumpClip;
+    public AudioClip runClip;
+
+    private AudioSource audioSource;
+    private bool isRunningSoundPlaying = false;
+
     private Vector3 startPosition;
 
     private void Awake()
     {
         startPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
         RigidBody.linearVelocity = new Vector2(moveInput * speed, RigidBody.linearVelocity.y);
-            if (moveInput > 0 && !m_FacingRight)
-            {
-                Flip();
-            }
-            else if (moveInput < 0 && m_FacingRight)
-            {
-                Flip();
-            }
-        
-        animator.SetBool("isRunning", moveInput != 0 );
 
-        if (Input.GetButtonDown("Jump") && isGrounded == false)
+        if (moveInput > 0 && !m_FacingRight)
+        {
+            Flip();
+        }
+        else if (moveInput < 0 && m_FacingRight)
+        {
+            Flip();
+        }
+
+        animator.SetBool("isRunning", moveInput != 0);
+
+        // ✅ Correct: jump when grounded is true
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             RigidBody.AddForce(new Vector2(RigidBody.linearVelocity.x, jumpForce));
             animator.SetBool("isJumping", true);
-        }
-        
 
+            if (jumpClip != null)
+            {
+                audioSource.PlayOneShot(jumpClip);
+            }
+        }
+
+        // ✅ Running sound
+        if (Mathf.Abs(moveInput) > 0.1f && isGrounded)
+        {
+            if (!isRunningSoundPlaying && runClip != null)
+            {
+                audioSource.clip = runClip;
+                audioSource.loop = true;
+                audioSource.Play();
+                isRunningSoundPlaying = true;
+            }
+        }
+        else
+        {
+            if (isRunningSoundPlaying)
+            {
+                audioSource.Stop();
+                isRunningSoundPlaying = false;
+            }
+        }
     }
-    
+
     private void Flip()
     {
         m_FacingRight = !m_FacingRight;
         transform.Rotate(0f, 180f, 0f);
 
-        // Optional: Flip weapon manually if needed
         Transform weapon = transform.Find("Weapon");
         if (weapon != null)
         {
@@ -62,24 +94,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    // ✅ FIXED: Grounded = TRUE when touching ground
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            isGrounded = true;
             animator.SetBool("isJumping", false);
         }
     }
-    
+
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            isGrounded = false;
         }
     }
-    
+
     public void ResetPlayer()
     {
         transform.position = startPosition;
@@ -89,13 +121,11 @@ public class PlayerController : MonoBehaviour
         {
             health.ResetHealth();
         }
-        
+
         PlayerShooter shooter = FindObjectOfType<PlayerShooter>();
         if (shooter != null)
         {
             shooter.ResetWeapons();
         }
-        // Add any other reset logic here: ammo, cooldowns, animations, etc.
     }
-
 }

@@ -16,4 +16,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3230629352235638825, guid: a2f189e3f58ad8e4881838167309d791,
     type: 3}
   damage: 3
-  fireRate: 0.2
+  fireRate: 0.1
+  shootSound: {fileID: 8300000, guid: f92da8fa5c5354d308754ee2a032d96b, type: 3}

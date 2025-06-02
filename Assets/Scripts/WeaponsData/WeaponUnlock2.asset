@@ -17,3 +17,4 @@ MonoBehaviour:
     type: 3}
   damage: 10
   fireRate: 0.2
+  shootSound: {fileID: 8300000, guid: 18727dddc07d148b59b6a5bf49e40ef2, type: 3}
