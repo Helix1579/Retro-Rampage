@@ -18,3 +18,5 @@ MonoBehaviour:
   damage: 1
   fireRate: 0.05
   fireSound: {fileID: 8300000, guid: 123f627b0644aed44a8cd7f8706ae63a, type: 3}
+  weaponIcon: {fileID: 8762602468191238306, guid: b219df56ce8454283ab4c1e84d41a4a6,
+    type: 3}
