@@ -90,7 +90,7 @@ public class PlayerShooter : Weapon, IShooter
     {
         if (weaponUI != null && unlockedWeapons.Count > 0)
         {
-            weaponUI.UpdateWeapon(unlockedWeapons[currentWeaponIndex].weaponName);
+            weaponUI.UpdateWeapon(unlockedWeapons[currentWeaponIndex].weaponIcon);
         }
     }
 

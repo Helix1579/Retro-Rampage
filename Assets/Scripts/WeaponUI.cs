@@ -1,16 +1,17 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class WeaponUI : MonoBehaviour
 {
-    [Header("Text UI Reference")]
-    public TextMeshProUGUI weaponText;
+    [Header("UI References")]
+    public Image weaponIcon; // ✅ Reference to the Image UI
 
-    public void UpdateWeapon(string weaponName)
+    public void UpdateWeapon(Sprite icon)
     {
-        if (weaponText != null)
+        if (weaponIcon != null)
         {
-            weaponText.text = $"Weapon: {weaponName}";
+            weaponIcon.sprite = icon;
+            weaponIcon.enabled = icon != null; // Hide if no sprite
         }
     }
 }
