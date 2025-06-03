@@ -14,4 +14,6 @@ public class DifficultySetting
     public int patrolHealth;
     public int rangedChaseHealth;
     public int bossHealth;
+    public int phase2Threshold;
+    public int phase3Threshold;
 }

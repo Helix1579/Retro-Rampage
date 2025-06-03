@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Difficulty")]
     public DifficultySetting currentDifficulty;
-public DifficultySetting noobSettings;
-public DifficultySetting proSettings;
-public DifficultySetting rampageSettings;
+    public DifficultySetting noobSettings;
+    public DifficultySetting proSettings;
+    public DifficultySetting rampageSettings;
 
 
     public void SetDifficulty(string difficulty)

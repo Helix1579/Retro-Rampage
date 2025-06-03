@@ -8,7 +8,8 @@ public class TurretController : MonoBehaviour
     private EnemyShooter shooter;
     private Transform target;
     private GameObject bulletPrefab;
-    public SpriteRenderer turretSprite;
+    private SpriteRenderer turretSprite;
+    private AudioClip fireSound;
     
     public Transform Target
     {
@@ -22,6 +23,9 @@ public class TurretController : MonoBehaviour
         target = shooter.player;
         shooter.fireRate = fireRate; // Sync rate with EnemyShooter's fireRate
         shooter.attackRange = range;
+        shooter.bulletPrefab = bulletPrefab;
+        turretSprite = GetComponent<SpriteRenderer>();
+        shooter.fireSound = fireSound;
     }
 
     void Update()
@@ -74,5 +78,12 @@ public class TurretController : MonoBehaviour
             turretSprite.sprite = newSprite;
         }
     }
-
+    public void UpdateTurretSound(AudioClip newSound)
+    {
+        fireSound = newSound;
+        if (fireSound != null)
+        {
+            shooter.fireSound = newSound;
+        }
+    }
 }

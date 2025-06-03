@@ -33,11 +33,6 @@ public class GameOverMenu : MonoBehaviour
         if (GameManager.Instance != null && scoreText != null)
         {
             scoreText.text = $"Score: {GameManager.Instance.playerScore}";
-            Debug.Log($"GameOverMenu: Showing Game Over Score: {GameManager.Instance.playerScore}");
-        }
-        else
-        {
-            Debug.LogWarning("GameOverMenu: GameManager.Instance or scoreText is null. Cannot display score.");
         }
 
         // Select the first button for gamepad navigation
