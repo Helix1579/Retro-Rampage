@@ -16,15 +16,14 @@ public class BossAI : MonoBehaviour
     [Header("Turrets")]
     public TurretController[] turrets;
 
-    [Header("Phase Thresholds")]
-    public int phase2Threshold = 70;
-    public int phase3Threshold = 35;
+    private int phase2Threshold;
+    private int phase3Threshold;
     
     private int bossHp;
-    
-    
     private EnemyHealth bossHealth;
-        private bool isInitialized = false;
+    private bool isInitialized = false;
+    [SerializeField] private PlayerWinMenu playerWinMenu;
+
 
    void Awake()
     {
@@ -32,21 +31,22 @@ public class BossAI : MonoBehaviour
         if (bossHealth == null)
         {
             Debug.LogError("BossAI: EnemyHealth component not found on this GameObject!");
-            enabled = false; // Disable the script if it can't function
+            enabled = false;
             return;
         }
 
-        // <<< IMPORTANT CHANGE: DO NOT set health here. It's too early.
         bossHealth.OnDeathEvent += OnBossDeath;
 
-        // Turret target can be set here as it doesn't depend on difficulty
         foreach (var turret in turrets)
             turret.Target = player;
+        
+        if (playerWinMenu == null)
+        {
+            Debug.LogWarning("BossAI: PlayerWinMenu not found in the scene.");
+        }
 
-        // Debug.Log($"BossAI: Awake completed. Awaiting full initialization."); // Optional: for debugging
     }
 
-    // <<< NEW METHOD: Call this after difficulty is set
     public void InitializeBoss()
     {
         if (isInitialized)
@@ -58,44 +58,36 @@ public class BossAI : MonoBehaviour
         int bossStartHealth = 100; // Default fallback if GameManager is not ready
         if (GameManager.Instance != null)
         {
-            if (GameManager.Instance.currentDifficulty != null)
-            {
-                bossStartHealth = GameManager.Instance.currentDifficulty.bossHealth;
-                Debug.Log($"BossAI: Initializing with {bossStartHealth} HP from GameManager.");
-            }
-            else
-            {
-                Debug.LogWarning("BossAI: GameManager.Instance.currentDifficulty is null during InitializeBoss. Using default 100 HP.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("BossAI: GameManager.Instance is null during InitializeBoss. Using default 100 HP.");
+            bossStartHealth = GameManager.Instance.currentDifficulty.bossHealth;
+            phase2Threshold = GameManager.Instance.currentDifficulty.phase2Threshold;
+            phase3Threshold = GameManager.Instance.currentDifficulty.phase3Threshold;
+            
         }
 
-        bossHealth.SetHealth(bossStartHealth); // <<< Health is set here!
-        bossHp = bossHealth.CurrentHealth; // Update the internal tracking variable
+        bossHealth.SetHealth(bossStartHealth);
+        bossHp = bossHealth.CurrentHealth;
 
         // Set initial turret fire rate, prefab, etc.
         SetTurretsFireRate(phaseFireRates[0], bulletPrefabs[0], phaseAttackRange[0], turretSprites[0]);
-        Debug.Log($"BossAI: Fully initialized with {bossHp} HP, starting phase: {currentPhase}");
-        
-        isInitialized = true; // Mark as initialized
+        Debug.Log($"BossAI initialized: HP={bossStartHealth}, Phase2={phase2Threshold}, Phase3={phase3Threshold}");
+
+        isInitialized = true;
     }
 
     void Update()
     {
-        // <<< IMPORTANT CHANGE: Only run Update logic if initialized
         if (!isInitialized || currentPhase == BossPhase.Dead || player == null) return;
 
-        int currentHp = bossHealth.CurrentHealth;
+        int currentHp = Mathf.Clamp(bossHealth.CurrentHealth, 0, bossHp); // prevent negative glitches
 
         if (currentHp != bossHp)
         {
+            Debug.Log($"Boss HP changed: {bossHp} → {currentHp}");
             HandlePhaseTransition(currentHp);
             bossHp = currentHp;
         }
     }
+
 
 
     void HandlePhaseTransition(int hp)
@@ -106,19 +98,18 @@ public class BossAI : MonoBehaviour
             return;
         }
 
+        // Always check for the *most advanced* phase first
         if (hp <= phase3Threshold && currentPhase != BossPhase.Phase3)
         {
             EnterPhase(BossPhase.Phase3);
         }
-        else if (hp <= phase2Threshold && currentPhase != BossPhase.Phase2)
+        else if (hp <= phase2Threshold && currentPhase == BossPhase.Phase1)
         {
             EnterPhase(BossPhase.Phase2);
         }
-        else if (hp > phase2Threshold && currentPhase != BossPhase.Phase1)
-        {
-            EnterPhase(BossPhase.Phase1);
-        }
+        // No need to go back to Phase1 once you're in Phase2 or 3
     }
+
 
 
     void EnterPhase(BossPhase newPhase)
@@ -151,5 +142,11 @@ public class BossAI : MonoBehaviour
     {
         currentPhase = BossPhase.Dead;
         Debug.Log("Boss defeated!");
+
+        if (playerWinMenu != null)
+        {
+            playerWinMenu.ShowPlayerWin();
+        }
     }
+
 }

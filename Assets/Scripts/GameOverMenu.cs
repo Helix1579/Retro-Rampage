@@ -24,11 +24,6 @@ public class GameOverMenu : MonoBehaviour
         if (GameManager.Instance != null && scoreText != null)
         {
             scoreText.text = $"Score: {GameManager.Instance.playerScore}";
-            Debug.Log($"Showing Game Over Score: {GameManager.Instance.playerScore}");
-        }
-        else
-        {
-            Debug.LogWarning("ScoreText or GameManager.Instance is null in ShowGameOver()");
         }
     }
 
