@@ -42,30 +42,23 @@ Follow the complete development journey through these detailed blog posts:
 
 ### 🔗 Blog Post Collection
 
-1. **[Getting Started: From Concept to First Prototype](https://example-blog.com/retro-rampage-part-1)**
-   - Initial game design concepts and inspiration from Contra
-   - Setting up the development environment and choosing the right tools
+1. **[Blog Post - 1 ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%20-1.md)**
+ 
 
-2. **[Character Design and Animation Pipeline](https://example-blog.com/retro-rampage-part-2)**
-   - Creating pixel art characters and enemies
-   - Implementing smooth animation systems and sprite management
+2. **[Blog Post - 2 : Game Design](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%202.md)**
+ 
 
-3. **[Level Design Philosophy and Implementation](https://example-blog.com/retro-rampage-part-3)**
-   - Designing challenging yet fair level layouts
-   - Balancing difficulty progression and player engagement
+3. ****[Blog Post - 3 : Player Mechanics](https://github.com/Helix1579/GMD/blob/main/BlogPost-3.md)**
+   
 
-4. **[Combat System and Weapon Mechanics](https://example-blog.com/retro-rampage-part-4)**
-   - Programming responsive shooting mechanics
-   - Implementing various weapon types and power-up systems
+4. **[Blog Post - 4 : Run and Gun ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%204%20.md)**
+ 
 
-5. **[Audio Design: Creating the Perfect Retro Soundtrack](https://example-blog.com/retro-rampage-part-5)**
-   - Composing chiptune music that captures the 80s arcade feel
-   - Sound effect design and audio implementation techniques
+5. **[Blog Post - 5 : Enemy AI](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%205%20.md)**
 
-6. **[Polish, Testing, and Launch: The Final Sprint](https://example-blog.com/retro-rampage-part-6)**
-   - Bug fixing, performance optimization, and user testing
-   - Marketing strategies and community building for indie games
 
+6. **[Blog Post - 6 : Boss Batlle ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%206.md)**
+   
 ---
 
 ## 🎨 Third-Party Assets & Code Sources
