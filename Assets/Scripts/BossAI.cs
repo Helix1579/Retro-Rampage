@@ -15,6 +15,9 @@ public class BossAI : MonoBehaviour
 
     [Header("Turrets")]
     public TurretController[] turrets;
+    
+    [Header("Turrets Weapon Sound")]
+    public AudioClip[] bulletSounds;
 
     private int phase2Threshold;
     private int phase3Threshold;
@@ -68,7 +71,7 @@ public class BossAI : MonoBehaviour
         bossHp = bossHealth.CurrentHealth;
 
         // Set initial turret fire rate, prefab, etc.
-        SetTurretsFireRate(phaseFireRates[0], bulletPrefabs[0], phaseAttackRange[0], turretSprites[0]);
+        SetTurrets(phaseFireRates[0], bulletPrefabs[0], phaseAttackRange[0], turretSprites[0], bulletSounds[0]);
         Debug.Log($"BossAI initialized: HP={bossStartHealth}, Phase2={phase2Threshold}, Phase3={phase3Threshold}");
 
         isInitialized = true;
@@ -121,21 +124,23 @@ public class BossAI : MonoBehaviour
 
         if (newPhase == BossPhase.Dead)
         {
-            SetTurretsFireRate(0f, null, 0f, null);
+            SetTurrets(0f, null, 0f, null, null);
             return;
         }
 
-        SetTurretsFireRate(phaseFireRates[(int)newPhase], bulletPrefabs[(int)newPhase], phaseAttackRange[(int)newPhase], turretSprites[(int)newPhase]);
+        SetTurrets(phaseFireRates[(int)newPhase], bulletPrefabs[(int)newPhase], phaseAttackRange[(int)newPhase], turretSprites[(int)newPhase], bulletSounds[(int)newPhase]);
     }
 
-    void SetTurretsFireRate(float rate, GameObject prefab, float range, Sprite sprite)
+    void SetTurrets(float rate, GameObject prefab, float range, Sprite sprite, AudioClip sound)
     {
         foreach (var turret in turrets)
         {
+            Debug.LogWarning("BossAI: Updating turret Sound" + sound.name);
             turret.UpdateFireRate(rate);
             turret.UpdateBulletPrefab(prefab);
             turret.UpdateAttackRange(range);
             turret.UpdateTurretSprite(sprite);
+            turret.UpdateTurretSound(sound);
         }
     }
     void OnBossDeath()
