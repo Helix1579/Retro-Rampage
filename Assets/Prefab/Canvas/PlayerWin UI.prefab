@@ -604,6 +604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerWinUI: {fileID: 3310092863750265215}
   scoreText: {fileID: 7761396536679036120}
+  firstSelectedButton: {fileID: 1543453351842476389}
 --- !u!1 &8982544670285648909
 GameObject:
   m_ObjectHideFlags: 0

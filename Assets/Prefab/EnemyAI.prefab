@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  scoreValue: 600
+  scoreValue: 35
 --- !u!114 &4822432739765709288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,9 +255,9 @@ MonoBehaviour:
   firePoint: {fileID: 3892503820810776205}
   bulletPrefab: {fileID: 2267541276879874454, guid: 1c0e73998c62bed46ad6dda801b30440,
     type: 3}
-  bulletSpeed: 20
-  fireRate: 0.2
-  damage: 10
+  bulletSpeed: 5
+  fireRate: 0.65
+  damage: 1
   bulletLifeTime: 2
   fireSound: {fileID: 8300000, guid: 35d670e23204ce14d8e25493b69aea3f, type: 3}
   audioSource: {fileID: 6147461225054049675}
