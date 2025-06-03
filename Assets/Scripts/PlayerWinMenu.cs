@@ -18,20 +18,19 @@ public class PlayerWinMenu : MonoBehaviour
 
     public void ShowPlayerWin()
     {
+        Debug.Log("ShowPlayerWin called");
         PlayerWinUI.SetActive(true);
+
         Time.timeScale = 0f;
         GameOver = true;
+        scoreText.text = $"Score: {GameManager.Instance.playerScore}";
 
-        // ✅ Only update the score now — GameManager should be ready
-        if (GameManager.Instance != null && scoreText != null)
-        {
-            scoreText.text = $"Score: {GameManager.Instance.playerScore}";
-        }
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        PlayerWinUI.SetActive(false);
         GameOver = false;
 
         if (EventSystem.current != null)
@@ -40,9 +39,8 @@ public class PlayerWinMenu : MonoBehaviour
         }
 
         GameManager.Instance.ResetGame();
-
-        // ✅ Load the main menu scene
-        SceneManager.LoadScene("MainScene"); // Make sure this name matches your scene exactly
+        
+        SceneManager.LoadScene("MainScene");
     }
 
 }
