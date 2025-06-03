@@ -48,7 +48,7 @@ Follow the complete development journey through these detailed blog posts:
 2. **[Blog Post - 2 : Game Design](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%202.md)**
  
 
-3. ****[Blog Post - 3 : Player Mechanics](https://github.com/Helix1579/GMD/blob/main/BlogPost-3.md)**
+3. **[Blog Post - 3 : Player Mechanics](https://github.com/Helix1579/GMD/blob/main/BlogPost-3.md)**
    
 
 4. **[Blog Post - 4 : Run and Gun ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%204%20.md)**
@@ -67,58 +67,36 @@ Follow the complete development journey through these detailed blog posts:
 
 #### 🎵 **Audio Assets**
 - **Chiptune Music Pack** by [RetroSoundStudio](https://retrosoundstudio.com)
-  - License: Creative Commons Attribution 4.0
-  - Used for: Background music and menu themes
+ 
 
 - **8-Bit Sound Effects Library** by [PixelAudioCo](https://pixelaudio.co)
-  - License: Royalty-free commercial use
-  - Used for: Weapon sounds, explosions, and UI feedback
+
 
 #### 🎨 **Visual Assets**
 - **Retro Tileset Collection** by [PixelCraftAssets](https://pixelcraftassets.com)
-  - License: Standard License (Commercial Use)
-  - Used for: Environment tiles and background elements
+
 
 - **Explosion Sprite Animations** by [GameDevMarket](https://gamedevmarket.net)
-  - License: Extended Commercial License
-  - Used for: Particle effects and destruction animations
+
 
 #### 🔤 **Fonts**
 - **Press Start 2P** by CodeMan38
-  - License: SIL Open Font License
-  - Used for: UI text and score display
 
-### 💻 **Code Libraries & Frameworks**
+### 💻 **Tutorials**
+- **[Shooting Tutorial](https://www.youtube.com/watch?v=wkKsl1Mfp5M&t=630s&ab_channel=Brackeys)**
 
-#### 🎮 **Game Engine**
-- **Unity 2022.3 LTS** - Primary game engine
-- **2D Toolkit** - Enhanced 2D development tools
+- **[PathFinding](https://www.youtube.com/watch?v=jvtFUfJ6CP8&ab_channel=Brackeys)**
 
-#### 📚 **Programming Libraries**
-- **DOTween** by Demigiant
-  - License: Free for commercial use
-  - Used for: Smooth animations and UI transitions
-
-- **Cinemachine** by Unity Technologies
-  - License: Unity Package (Free)
-  - Used for: Dynamic camera system and screen shake effects
-
-- **Input System** by Unity Technologies
-  - License: Unity Package (Free)
-  - Used for: Modern input handling and controller support
-
-#### 🔧 **Development Tools**
-- **Aseprite** - Pixel art creation and animation
-- **Audacity** - Audio editing and processing
-- **Git** with **GitHub** - Version control and project management
+- **[Canvas References](https://www.youtube.com/watch?v=JivuXdrIHK0&t=613s&ab_channel=Brackeys)**
 
 ---
 
-## 🎯 How to Play
+## 🎯 How to Play Mouse/Keyboard  OR GAMEPAD
 
-1. **Movement**: Use WASD or Arrow Keys
-2. **Shoot**: Spacebar or Left Mouse Button
-3. **Jump**: W or Up Arrow
-4. **Pause**: ESC or P
+1. **Movement**: Use WASD or Arrow Keys / Left Joystick
+2. **Shoot**: Left Mouse Button / Right Trigger
+3. **Jump**: space / A Button
+4. **Pause**: ESC / Start Button
+5. **Weapon Holster**: H / B Button
 
 
