@@ -196,7 +196,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 09987ee537b1b8a4eb55f95ccc0a006b, type: 3}
   audioSource: {fileID: 2573151035389216280}
   player: {fileID: 0}
-  attackRange: 7
+  attackRange: 9.5
 --- !u!114 &3437227512601107326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  scoreValue: 10
+  scoreValue: 75
 --- !u!114 &5195375639167973163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -6964721071972618870, guid: 4052fbd434f4ad04396540df57a2ada7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.56, y: 3.74}
