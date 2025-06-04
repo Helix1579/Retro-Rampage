@@ -30,9 +30,7 @@
 
 🎬 **Watch the full gameplay walkthrough and development journey:**
 
-[![Retro Rampage - Gameplay](https://youtu.be/mCnDn3gYvjY)
-
-*Click the image above to watch the complete gameplay video on YouTube!*
+[Retro Rampage - Gameplay](https://www.youtube.com/watch?v=mCnDn3gYvjY&ab_channel=YashrajMashruwala)
 
 ---
 
