@@ -42,22 +42,23 @@ Follow the complete development journey through these detailed blog posts:
 
 ### 🔗 Blog Post Collection
 
-1. **[Blog Post - 1 ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%20-1.md)**
+1. **[Blog Post - 1](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%20-1.md)**
+   - Initial concept development and project setup
  
-
-2. **[Blog Post - 2 : Game Design](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%202.md)**
+2. **[Blog Post - 2: Game Design](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%202.md)**
+   - Core gameplay mechanics and level design philosophy
  
-
-3. **[Blog Post - 3 : Player Mechanics](https://github.com/Helix1579/GMD/blob/main/BlogPost-3.md)**
-   
-
-4. **[Blog Post - 4 : Run and Gun ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%204%20.md)**
+3. **[Blog Post - 3: Player Mechanics](https://github.com/Helix1579/GMD/blob/main/BlogPost-3.md)**
+   - Character movement, jumping, and control implementation
  
-
-5. **[Blog Post - 5 : Enemy AI](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%205%20.md)**
-
-
-6. **[Blog Post - 6 : Boss Batlle ](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%206.md)**
+4. **[Blog Post - 4: Run and Gun](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%204%20.md)**
+   - Weapon systems and shooting mechanics
+ 
+5. **[Blog Post - 5: Enemy AI](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%205%20.md)**
+   - Enemy behavior patterns and artificial intelligence
+ 
+6. **[Blog Post - 6: Boss Battle](https://github.com/Helix1579/GMD/blob/main/Blog%20Post%206.md)**
+   - Epic boss encounter design and implementation
    
 ---
 
@@ -67,36 +68,43 @@ Follow the complete development journey through these detailed blog posts:
 
 #### 🎵 **Audio Assets**
 - **Chiptune Music Pack** by [RetroSoundStudio](https://retrosoundstudio.com)
+  - Used for background music and menu themes
  
-
 - **8-Bit Sound Effects Library** by [PixelAudioCo](https://pixelaudio.co)
-
+  - Used for weapon sounds, explosions, and player feedback
 
 #### 🎨 **Visual Assets**
 - **Retro Tileset Collection** by [PixelCraftAssets](https://pixelcraftassets.com)
-
-
+  - Used for environment tiles and level design
+ 
 - **Explosion Sprite Animations** by [GameDevMarket](https://gamedevmarket.net)
-
+  - Used for weapon effects and enemy destruction
 
 #### 🔤 **Fonts**
 - **Press Start 2P** by CodeMan38
+  - Used for UI text and game menus
 
-### 💻 **Tutorials**
-- **[Shooting Tutorial](https://www.youtube.com/watch?v=wkKsl1Mfp5M&t=630s&ab_channel=Brackeys)**
+### 💻 **Tutorials & References**
+- **[Shooting Tutorial](https://www.youtube.com/watch?v=wkKsl1Mfp5M&t=630s&ab_channel=Brackeys)** by Brackeys
+  - Implemented for weapon mechanics and projectile systems
 
-- **[PathFinding](https://www.youtube.com/watch?v=jvtFUfJ6CP8&ab_channel=Brackeys)**
+- **[PathFinding](https://www.youtube.com/watch?v=jvtFUfJ6CP8&ab_channel=Brackeys)** by Brackeys
+  - Used for enemy AI movement and tracking
 
-- **[Canvas References](https://www.youtube.com/watch?v=JivuXdrIHK0&t=613s&ab_channel=Brackeys)**
+- **[Canvas References](https://www.youtube.com/watch?v=JivuXdrIHK0&t=613s&ab_channel=Brackeys)** by Brackeys
+  - Utilized for UI implementation and visual effects
 
 ---
 
-## 🎯 How to Play Mouse/Keyboard  OR GAMEPAD
+## 🎯 How to Play
 
-1. **Movement**: Use WASD or Arrow Keys / Left Joystick
-2. **Shoot**: Left Mouse Button / Right Trigger
-3. **Jump**: space / A Button
-4. **Pause**: ESC / Start Button
-5. **Weapon Holster**: H / B Button
+### Controls
+| Action | Keyboard/Mouse | Gamepad |
+|--------|----------------|---------|
+| **Movement** | WASD or Arrow Keys | Left Joystick |
+| **Shoot** | Left Mouse Button | Right Trigger |
+| **Jump** | Space | A Button |
+| **Pause** | ESC | Start Button |
+| **Weapon Holster** | H | B Button |
 
-
+---
